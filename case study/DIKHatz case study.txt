@@ -1,0 +1,48 @@
+Case Study: Custom Shopify Development & Hat Patch Customizer for DIKHatz
+Client Platform: dikhatz.com
+
+Industry: Apparel, Headwear & Custom Accessories
+
+Core Technologies: Shopify 2.0, Custom Liquid, Dynamic Interactive Customizer Engine, JavaScript, Meta/Google Tracking Infrastructure
+
+Executive Summary
+DIKHatz is a US-based headwear and custom accessory brand that needed a full e-commerce storefront built entirely from scratch. The core technical requirement was implementing an interactive, custom hat patch feature—allowing shoppers to select, preview, and personalize headwear with interchangeable patches in real time. Built on Shopify 2.0, the platform combines bespoke visual presentation with high-performance customization tools tailored for the US apparel market.
+
+1. The Challenge
+Custom Patch Architecture: Generic Shopify product pages cannot natively support dynamic patch combinations, real-time visual updates, and custom SKU bundling.
+
+Complex Ordering Logic: The backend needed to pass custom patch selections, placement metadata, and add-on pricing directly into the customer's cart without breaking inventory counts.
+
+High Visual Standards: Headwear consumers require high-resolution previewing of patch textures, colors, and placement options prior to checkout.
+
+2. Technical Architecture & Solutions
+System Workflow:
+
+Custom Front-End Storefront (Shopify 2.0 / Liquid)
+
+Built from scratch using lightweight Liquid code to ensure rapid load speeds and a clean, responsive layout across desktop and mobile devices.
+
+Interactive Patch Customizer Engine
+
+Developed a custom front-end interface that allows users to pick a base hat, select custom patch designs, visual placement, and instantly preview the combined product before adding it to their cart.
+
+Dynamic Cart & SKU Bundling
+
+Engineered cart logic that pairs the base hat SKU with chosen patch variants, passing line-item properties and custom pricing seamlessly to the Shopify checkout pipeline.
+
+3. Key Implementation Pillars
+Bespoke Theme Development: Engineered a custom Shopify 2.0 theme from scratch, avoiding bloated page builders to maintain maximum page speed and clean SEO hierarchy.
+
+Real-Time Visual Customization: Built custom interactive swatch and patch selector logic that updates product images dynamically as users modify their selections.
+
+Frictionless E-Commerce Stack Setup: Configured US shipping logic, automated order fulfillment workflows, Shop Pay / Apple Pay integration, and marketing tracking pixels (Meta & Google Ads).
+
+4. Platform Metrics & System Impact
+Seamless Customization UX: Users can easily build and preview customized patch hats within a single interactive interface.
+
+Clean Inventory & Order Data: Custom line-item metadata ensures fulfillment teams receive exact patch selection details for every order.
+
+Optimized Mobile Performance: Lightweight theme design guarantees fast visual rendering for mobile shoppers arriving from social channels.
+
+5. Summary
+By engineering DIKHatz's storefront from the ground up and implementing a custom patch visualizer, the platform delivers a distinct, high-converting shopping experience—combining personalized product creation with an enterprise-grade Shopify 2.0 checkout system.

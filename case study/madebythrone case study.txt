@@ -1,0 +1,48 @@
+Case Study: Custom Shopify Development for USA Beauty & Cosmetic Brand Made by Throne
+Client Platform: madebythrone.com
+
+Industry: Cosmetics, Beauty & Skincare
+
+Core Technologies: Shopify 2.0, Custom Liquid, Tailwind CSS / JavaScript, Klaviyo, Meta / Google Tracking Infrastructure
+
+Executive Summary
+Made by Throne is a premium US-based beauty and cosmetic brand that required a custom, high-converting digital storefront built entirely from scratch. To capture the brand's aesthetic while driving conversion rates, a custom Shopify 2.0 architecture was engineered to highlight product textures, shade variations, and customer reviews. The outcome is a high-speed, mobile-optimized store designed for US beauty consumers.
+
+1. The Challenge
+High Aesthetic Standard: Cosmetic brands require photorealistic visual presentation, detailed ingredient callouts, and interactive shade selectors.
+
+Mobile-First Shoppers: Over 80% of cosmetic traffic originates from mobile social channels (TikTok, Instagram), requiring instant page loads and frictionless single-swipe checkouts.
+
+Custom Store Requirements: Default Shopify themes lacked the flexibility needed for custom bundle builders, dynamic cross-sells, and custom product page (PDP) storytelling sections.
+
+2. Technical Architecture & Solutions
+System Workflow:
+
+Custom Front-End Storefront (Shopify 2.0 / Liquid)
+
+Custom-coded Liquid sections built from scratch to allow full modular content control without code bloat or third-party theme limitations.
+
+Interactive Product Discovery Engine
+
+Built custom variant swatches, shade match visualizers, ingredient tabs, and rich before/after gallery sliders directly on the PDP.
+
+Conversion & Retention Ecosystem
+
+Integrated custom slide-out cart (Drawer Cart) featuring progress bars for free shipping, dynamic cross-sells, and single-click checkout routing.
+
+3. Key Implementation Pillars
+Bespoke Theme Development: Developed a clean, lightweight Shopify 2.0 theme from scratch, avoiding heavy third-party page builders to maximize site speed and SEO performance.
+
+Custom PDP Architecture: Built tailored cosmetic sections including shade selectors, texture zoom features, customer reviews, and accordions for usage instructions.
+
+Full E-Commerce Stack Setup: Configured payment gateways (Shop Pay, Apple Pay, credit cards), shipping logic for US domestic fulfillment, and tracking pixels for Meta and Google Ads.
+
+4. Platform Metrics & System Impact
+Lightning-Fast Mobile Performance: Custom Liquid architecture delivers rapid load speeds on mobile networks.
+
+Increased Average Order Value (AOV): Dynamic slide-out cart with free shipping thresholds and cross-sell prompts increases cart size before checkout.
+
+Zero Theme Bloat: Scratch-built code ensures total design freedom and effortless future feature updates.
+
+5. Summary
+By building Made by Throne’s storefront entirely from scratch on Shopify 2.0, the platform provides a high-end beauty experience tailored to the modern US cosmetic market—combining visual presentation with a conversion-focused checkout pipeline.

@@ -1,0 +1,62 @@
+Case Study: E-Commerce Operations, Inventory Management & UI Transformation for Meri Pharmacy
+Client Platform: meripharmacy.pk
+
+Industry: Healthcare, Online Pharmacy & Retail
+
+Core Technologies: Shopify 2.0, Liquid Customization, Real-Time Inventory Sync Engine, Digital Marketing Infrastructure
+
+Executive Summary
+Meri Pharmacy is a fast-growing Pakistani online healthcare platform. To support its catalog of prescription medicines, healthcare products, and surgical supplies, the platform underwent an operational overhaul. By combining custom Shopify UI/UX modernization, real-time inventory management, and targeted digital marketing campaigns, the store scaled its online order throughput while delivering a clean checkout experience.
+
+1. The Challenge
+Complex Pharmaceutical Inventory: Managing thousands of rapidly changing SKUs, batch numbers, and stock availability across physical branches and online channels.
+
+Strict Checkout & Local Logistics: Handling local delivery fees, platform/FBR charges, and nationwide shipping tiers smoothly at checkout.
+
+High Trust Barrier: Building a mobile-first UI that instills medical trust for customers uploading prescriptions and ordering healthcare essentials.
+
+2. Technical Architecture & Operational Pillars
+UI/UX Modernization (Shopify 2.0):
+
+Built custom collection layouts for health concerns, prescription upload flows, and clean product discovery cards.
+
+Optimized mobile-first navigation to allow quick addition of essential OTC medicines and healthcare products.
+
+Inventory & Order Sync:
+
+Implemented structured SKU mapping to reflect real-time stock availability, minimizing out-of-stock orders.
+
+Configured multi-tier shipping rules for local delivery in Karachi and nationwide fulfillment.
+
+Data-Driven Growth & Marketing:
+
+Connected performance tracking pixels (Meta Pixel, Google Analytics) to optimize ad spend across high-margin healthcare and wellness categories.
+
+Executed re-engagement campaigns targeting repeat prescription refills and healthcare essentials.
+
+3. Operations & Architecture Overview
+Front-End Experience (Custom Shopify UI)
+
+Mobile-optimized storefront, category filters, prescription upload form.
+
+Core Inventory & Store Engine
+
+Automated stock updates, price adjustments, and out-of-stock triggers.
+
+Fulfillment & Logistics Framework
+
+Automated shipping calculations (Karachi flat rates vs. nationwide weight tiers).
+
+Customer Acquisition Engine
+
+Meta & Google Ads conversion tracking combined with automated WhatsApp order support.
+
+4. Key Results & Platform Impact
+Streamlined UI Navigation: Accelerated time-to-checkout for returning customers ordering monthly prescription refills.
+
+Automated Stock Precision: Reduced order cancellation rates caused by inventory mismatches across thousands of pharmaceutical SKUs.
+
+Scalable Nationwide Reach: Optimized logistics tracking allowed smooth order processing for both local same-day delivery and nationwide dispatch.
+
+5. Summary
+By aligning custom front-end development with inventory synchronization and digital marketing, Meri Pharmacy converted its Shopify store into a scalable digital pharmacy ecosystem across Pakistan.
