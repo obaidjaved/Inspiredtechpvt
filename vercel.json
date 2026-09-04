@@ -1,0 +1,14 @@
+{
+  "outputDirectory": "static-site",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/portfolio/:slug", "destination": "/portfolio/:slug.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/web-development", "destination": "/web-development.html" },
+    { "source": "/erpnext", "destination": "/erpnext.html" },
+    { "source": "/ai-automation", "destination": "/ai-automation.html" }
+  ]
+}
