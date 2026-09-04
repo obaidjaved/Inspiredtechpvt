@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Inspired Technology</title>
+  <meta name="description" content="Get in touch with Inspired Technology — Pakistan's most trusted IT solutions provider. Offices in Karachi, New Jersey, and Germany.">
+  <link rel="icon" type="image/png" href="clients/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="site-header" class="header-scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Inspired Technology - Home">
+        <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-1" role="menubar">
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Company</a>
+
+        <!-- Services Dropdown -->
+        <div id="services-dropdown" class="relative">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg flex items-center gap-1.5 text-[#9a9a9a] hover:text-white hover:bg-white/5">
+            Services
+            <svg class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200 text-[#636363]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown Menu -->
+          <div id="services-dropdown-menu" class="absolute top-full left-0 mt-2 w-80 bg-[#121212] border border-[#2a2a2a] rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl opacity-0 pointer-events-none translate-y-2 scale-95 transition-all duration-200">
+            <div class="space-y-1">
+              <a href="web-development.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">Website Development</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">NEW</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Next.js web apps, Headless e-commerce & PWAs</span>
+              </a>
+              <a href="erpnext.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">ERPNext Implementation</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">ZATCA</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">ZATCA compliance, Accounting, HRMS & Supply Chain</span>
+              </a>
+              <a href="ai-automation.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">AI Automation & Agents</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">AI</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Autonomous LLM agents, Enterprise RAG & OCR</span>
+              </a>
+              <a href="services.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">All Services & Infrastructure</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">15+ Yrs</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Cisco networking, Data cabling, CCTV & 24/7 SLAs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Portfolio</a>
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">About</a>
+
+        <a href="contact.html" class="ml-4 btn btn-primary btn-sm">Contact Us</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl lg:hidden pt-[72px] overflow-y-auto translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col p-6 gap-2">
+      <div class="flex justify-end mb-4">
+        <button id="mobile-menu-close" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Company</a>
+
+      <!-- Mobile Services Accordion -->
+      <div>
+        <button id="mobile-services-btn" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8] w-full flex items-center justify-between">
+          <span>Services</span>
+          <svg class="mobile-arrow w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-sub" class="pl-4 space-y-3 py-2 border-l border-[#2a2a2a] my-2 max-h-0 overflow-hidden transition-all duration-300">
+          <a href="web-development.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">Website Development</a>
+          <a href="erpnext.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">ERPNext Implementation</a>
+          <a href="ai-automation.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">AI Automation & Agents</a>
+          <a href="services.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">All Services & Infrastructure</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Portfolio</a>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">About Us</a>
+
+      <div class="mt-8">
+        <a href="contact.html" class="btn btn-primary w-full">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== Hero (Dark) ===== -->
+    <section class="pt-32 pb-24 bg-[#0a0a0a] relative overflow-hidden" aria-labelledby="contact-hero-heading">
+      <div class="absolute inset-0 opacity-15" aria-hidden="true">
+        <div class="absolute inset-0" style="background-image: radial-gradient(rgba(99,102,241,0.2) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap items-center gap-2 mb-6">
+          <a href="index.html" class="text-[#636363] hover:text-white text-xs transition-colors">Home</a>
+          <span class="text-[#454545] text-xs">/</span>
+          <span class="text-[#818cf8] text-xs font-semibold">Contact Us</span>
+        </div>
+
+        <div class="max-w-3xl">
+          <span class="badge badge-primary badge-lg mb-6 uppercase tracking-wider">Let&apos;s Work Together</span>
+          <h1 id="contact-hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#e8e8e8] leading-[1.08] tracking-tight">Start Your Next Project with <span class="gradient-text">Inspired Technology</span></h1>
+          <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8">Have a question, need an architecture review, or looking to deploy an enterprise digital system? Connect directly with our team in Karachi, the US, Saudi Arabia, or Germany.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3-Step Process (Light Gray Section) ===== -->
+    <section class="section-light-gray py-16 border-b border-[#e5e7eb]" aria-label="Our onboarding process">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#e5e7eb] flex items-center justify-center font-bold text-[#6366f1] text-base shrink-0 shadow-sm">01</div>
+            <div>
+              <h3 class="text-base font-bold text-[#0d0d0d] mb-1">Schedule Discovery Call</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed">We learn about your business goals, technical constraints, timeline, and budget in a focused 30-minute session.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#e5e7eb] flex items-center justify-center font-bold text-[#6366f1] text-base shrink-0 shadow-sm">02</div>
+            <div>
+              <h3 class="text-base font-bold text-[#0d0d0d] mb-1">Architecture &amp; Project Blueprint</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed">Our principal architects create a detailed solution proposal, sprint roadmap, team allocation, and fixed milestones.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#e5e7eb] flex items-center justify-center font-bold text-[#6366f1] text-base shrink-0 shadow-sm">03</div>
+            <div>
+              <h3 class="text-base font-bold text-[#0d0d0d] mb-1">Agile Execution &amp; Scale</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed">Bi-weekly demos, staging environment access, 24/7 SLA uptime monitoring, and continuous engineering iterations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Form + Contact Info (Light Section) ===== -->
+    <section class="section-light py-24 relative z-10" aria-labelledby="form-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Form -->
+          <div class="lg:col-span-7">
+            <div class="mb-8">
+              <span class="badge badge-primary mb-3">Send a Message</span>
+              <h2 id="form-heading" class="text-3xl font-bold text-[#0d0d0d] mt-2">Tell Us About Your Project</h2>
+              <p class="text-[#6b7280] text-sm mt-2">Fill out the form below and an engineer will respond within 24 hours with next steps.</p>
+            </div>
+
+            <form id="contact-form" class="space-y-4" method="POST" action="mailto:contact@inspired.com.pk" enctype="text/plain">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-control">
+                  <label for="name" class="label">
+                    <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Full Name *</span>
+                  </label>
+                  <input id="name" name="name" type="text" required class="input input-bordered w-full" placeholder="Muhammad Ali">
+                </div>
+                <div class="form-control">
+                  <label for="email" class="label">
+                    <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Corporate Email *</span>
+                  </label>
+                  <input id="email" name="email" type="email" required class="input input-bordered w-full" placeholder="ali@company.com">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-control">
+                  <label for="phone" class="label">
+                    <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Phone / WhatsApp</span>
+                  </label>
+                  <input id="phone" name="phone" type="tel" class="input input-bordered w-full" placeholder="+92 300 1234567">
+                </div>
+                <div class="form-control">
+                  <label for="company" class="label">
+                    <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Company / Organization</span>
+                  </label>
+                  <input id="company" name="company" type="text" class="input input-bordered w-full" placeholder="Enterprise Corp">
+                </div>
+              </div>
+
+              <div class="form-control">
+                <label for="service" class="label">
+                  <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Primary Service of Interest *</span>
+                </label>
+                <select id="service" name="service" required class="select select-bordered w-full">
+                  <option value="">Select a service category</option>
+                  <option value="web-development">Web Development &amp; Digital Engineering</option>
+                  <option value="erpnext">ERPNext &amp; ZATCA E-Invoicing Implementation</option>
+                  <option value="ai-automation">AI Automation &amp; Agentic Workflows</option>
+                  <option value="network-security">Network Security &amp; Cisco Infrastructure</option>
+                  <option value="sla">24/7 Service Level Agreement (SLA)</option>
+                  <option value="cabling">Structured Data Cabling &amp; Comms Room</option>
+                  <option value="cctv">IP CCTV Surveillance Systems</option>
+                  <option value="consulting">General Technical Consulting</option>
+                </select>
+              </div>
+
+              <div class="form-control">
+                <label for="message" class="label">
+                  <span class="label-text text-xs font-bold uppercase tracking-wider text-[#374151]">Project Details &amp; Requirements *</span>
+                </label>
+                <textarea id="message" name="message" required rows="5" class="textarea textarea-bordered w-full resize-none" placeholder="Please describe your current systems, objectives, timeline, and key requirements..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full">Submit Inquiry</button>
+            </form>
+          </div>
+
+          <!-- Offices Sidebar -->
+          <div class="lg:col-span-5 space-y-5">
+            <div class="bg-[#f8f9fa] border border-[#e5e7eb] rounded-2xl p-6">
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-4">Our Global Locations</h3>
+              <div class="space-y-4">
+                <!-- Karachi -->
+                <div class="p-4 bg-white border border-[#e5e7eb] rounded-xl shadow-xs">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h4 class="font-bold text-sm text-[#0d0d0d]">Karachi, Pakistan (Head Office)</h4>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Global HQ</span>
+                  </div>
+                  <p class="text-[#6b7280] text-xs leading-relaxed mb-2.5">Office A9, Lateefi Society, Main Shahrah-e-Faisal / Gulistan-e-Johar, Karachi 75400</p>
+                  <div class="space-y-1 text-xs">
+                    <div><a href="tel:+923009221193" class="text-[#6366f1] font-semibold hover:underline">+92 300 9221193</a></div>
+                    <div><a href="tel:+923208280254" class="text-[#6366f1] font-semibold hover:underline">+92 320 8280254</a></div>
+                    <div><a href="tel:+923332338340" class="text-[#6366f1] font-semibold hover:underline">+92 333 233 8340</a></div>
+                    <div class="text-[#9ca3af] text-[11px] pt-1">Mon – Fri, 9:00 AM – 6:00 PM PKT</div>
+                  </div>
+                </div>
+                <!-- New Jersey -->
+                <div class="p-4 bg-white border border-[#e5e7eb] rounded-xl shadow-xs">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h4 class="font-bold text-sm text-[#0d0d0d]">New Jersey, United States</h4>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Americas</span>
+                  </div>
+                  <p class="text-[#6b7280] text-xs leading-relaxed mb-2.5">80 Addison Avenue, Rockaway, NJ 07866</p>
+                  <div class="space-y-1 text-xs">
+                    <div><a href="tel:+19736260873" class="text-[#6366f1] font-semibold hover:underline">+1 (973) 626-0873</a></div>
+                    <div class="text-[#9ca3af] text-[11px] pt-1">Mon – Fri, 9:00 AM – 5:00 PM EST</div>
+                  </div>
+                </div>
+                <!-- Germany -->
+                <div class="p-4 bg-white border border-[#e5e7eb] rounded-xl shadow-xs">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h4 class="font-bold text-sm text-[#0d0d0d]">Germany &amp; International</h4>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Europe</span>
+                  </div>
+                  <p class="text-[#6b7280] text-xs leading-relaxed mb-2.5">European Representative Office</p>
+                  <div class="space-y-1 text-xs">
+                    <div><a href="tel:+4915755769970" class="text-[#6366f1] font-semibold hover:underline">+49 1575 5769970</a></div>
+                    <div class="text-[#9ca3af] text-[11px] pt-1">Mon – Fri, 9:00 AM – 5:00 PM CET</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 24/7 Support Hotline Box -->
+            <div class="bg-[#6366f1] text-white rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-300 animate-ping"></span>
+                <h4 class="font-bold text-base" style="color: #ffffff;">24/7 Critical Network Support</h4>
+              </div>
+              <p class="text-xs leading-relaxed mb-4" style="color: #ffffff;">For active SLA corporate clients experiencing emergency network or server downtime, our on-call resident engineers are available 24/7.</p>
+              <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-sm bg-white text-[#6366f1] hover:bg-white/90">Direct WhatsApp Hotline</a>
+            </div>
+
+            <!-- Email Contacts -->
+            <div class="bg-[#f8f9fa] border border-[#e5e7eb] rounded-2xl p-6">
+              <h4 class="font-bold text-sm text-[#0d0d0d] mb-3">Email Us</h4>
+              <div class="space-y-2 text-sm">
+                <a href="mailto:contact@inspired.com.pk" class="flex items-center gap-2 text-[#6366f1] font-semibold hover:underline">contact@inspired.com.pk</a>
+                <a href="mailto:fatima@inspired.com.pk" class="flex items-center gap-2 text-[#6366f1] font-semibold hover:underline">fatima@inspired.com.pk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f]" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
+          <!-- Column 1: Brand Info -->
+          <div class="lg:col-span-4">
+            <a href="index.html" class="flex items-center gap-2.5 mb-5" aria-label="Inspired Technology - Home">
+              <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+            </a>
+            <p class="text-[#636363] text-sm leading-relaxed max-w-sm mb-6">Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.</p>
+            <div class="flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/www.inspired.com.pk/" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-white" aria-label="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63c-.01-.9-.74-1.63-1.63-1.63Z" />
+                </svg>
+              </a>
+              <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-emerald-400" aria-label="WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.23-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29-.25-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.25-.64.79-.79.95-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.47Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Solutions -->
+          <div class="lg:col-span-3">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services &amp; Solutions</h3>
+            <ul class="space-y-2.5" role="list">
+              <li><a href="web-development.html" class="text-[#636363] text-sm hover:text-white transition-colors">Website Development</a></li>
+              <li><a href="erpnext.html" class="text-[#636363] text-sm hover:text-white transition-colors">ERPNext Implementation</a></li>
+              <li><a href="ai-automation.html" class="text-[#636363] text-sm hover:text-white transition-colors">AI Automation &amp; Agents</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Network Security &amp; Firewalls</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">24/7 SLA Operations</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Structured Data Cabling</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">CCTV &amp; IP Surveillance</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company -->
+          <div class="lg:col-span-2">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h3>
+            <ul class="space-y-2.5" role="list">
+              <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">About Us</a></li>
+              <li><a href="portfolio.html" class="text-[#636363] text-sm hover:text-white transition-colors">Case Studies &amp; Portfolio</a></li>
+              <li><a href="about.html#story-heading" class="text-[#636363] text-sm hover:text-white transition-colors">Leadership &amp; Story</a></li>
+              <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">Our Best Clients</a></li>
+              <li><a href="contact.html" class="text-[#636363] text-sm hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Global Hubs -->
+          <div class="lg:col-span-3">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Global Locations</h3>
+            <div class="space-y-3 text-xs">
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">Pakistan HQ</div>
+                <div class="text-[#818cf8] mb-0.5">+92 300 9221193</div>
+                <div class="text-[#636363]">Main Shahrah-e-Faisal, Karachi</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">United States</div>
+                <div class="text-[#818cf8] mb-0.5">+1 (973) 626-0873</div>
+                <div class="text-[#636363]">80 Addison Ave, Rockaway, NJ</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">International</div>
+                <div class="text-[#818cf8] mb-0.5">+49 1575 5769970</div>
+                <div class="text-[#636363]">European Representation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#636363]">
+          <div>&copy; 2026 Inspired Technology Pvt. Ltd. All rights reserved.</div>
+          <div class="flex gap-6">
+            <a href="about.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="about.html" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Security Overview</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspired Technology — AI-Native Global Digital Engineering Partner</title>
+  <meta name="description" content="Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.">
+  <link rel="icon" type="image/png" href="clients/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="site-header" class="header-scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Inspired Technology - Home">
+        <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-1" role="menubar">
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Company</a>
+
+        <!-- Services Dropdown -->
+        <div id="services-dropdown" class="relative">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg flex items-center gap-1.5 text-[#9a9a9a] hover:text-white hover:bg-white/5">
+            Services
+            <svg class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200 text-[#636363]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown Menu -->
+          <div id="services-dropdown-menu" class="absolute top-full left-0 mt-2 w-80 bg-[#121212] border border-[#2a2a2a] rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl opacity-0 pointer-events-none translate-y-2 scale-95 transition-all duration-200">
+            <div class="space-y-1">
+              <a href="web-development.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">Website Development</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">NEW</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Next.js web apps, Headless e-commerce & PWAs</span>
+              </a>
+              <a href="erpnext.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">ERPNext Implementation</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">ZATCA</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">ZATCA compliance, Accounting, HRMS & Supply Chain</span>
+              </a>
+              <a href="ai-automation.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">AI Automation & Agents</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">AI</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Autonomous LLM agents, Enterprise RAG & OCR</span>
+              </a>
+              <a href="services.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">All Services & Infrastructure</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">15+ Yrs</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Cisco networking, Data cabling, CCTV & 24/7 SLAs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Portfolio</a>
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">About</a>
+
+        <a href="contact.html" class="ml-4 btn btn-primary btn-sm">Contact Us</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl lg:hidden pt-[72px] overflow-y-auto translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col p-6 gap-2">
+      <div class="flex justify-end mb-4">
+        <button id="mobile-menu-close" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Company</a>
+
+      <!-- Mobile Services Accordion -->
+      <div>
+        <button id="mobile-services-btn" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8] w-full flex items-center justify-between">
+          <span>Services</span>
+          <svg class="mobile-arrow w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-sub" class="pl-4 space-y-3 py-2 border-l border-[#2a2a2a] my-2 max-h-0 overflow-hidden transition-all duration-300">
+          <a href="web-development.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">Website Development</a>
+          <a href="erpnext.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">ERPNext Implementation</a>
+          <a href="ai-automation.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">AI Automation & Agents</a>
+          <a href="services.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">All Services & Infrastructure</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Portfolio</a>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">About Us</a>
+
+      <div class="mt-8">
+        <a href="contact.html" class="btn btn-primary w-full">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== 1. HERO — Full viewport slider with gradient text ===== -->
+    <section class="relative h-screen min-h-[700px] overflow-hidden" aria-label="Hero">
+      <!-- Slide backgrounds -->
+      <div class="hero-slide absolute inset-0 transition-all duration-[800ms]" style="opacity:1;transform:scale(1)">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format" alt="" class="w-full h-full object-cover" fetchpriority="high">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-all duration-[800ms]" style="opacity:0;transform:scale(1.05)">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop&auto=format" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-all duration-[800ms]" style="opacity:0;transform:scale(1.05)">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=1080&fit=crop&auto=format" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-all duration-[800ms]" style="opacity:0;transform:scale(1.05)">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&auto=format" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-all duration-[800ms]" style="opacity:0;transform:scale(1.05)">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1920&h=1080&fit=crop&auto=format" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      </div>
+
+      <!-- Hero Slide Counter -->
+      <div class="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-3">
+        <span id="hero-counter-num" class="text-white text-sm font-bold" style="font-variant-numeric: tabular-nums">01</span>
+        <div class="w-px h-16 bg-white/20 relative">
+          <div id="hero-progress" class="absolute top-0 left-0 w-full bg-white transition-all duration-500" style="height: 20%"></div>
+        </div>
+        <div class="flex gap-2">
+          <button id="hero-prev" class="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all duration-200 active:scale-90" aria-label="Previous slide">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button id="hero-next" class="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all duration-200 active:scale-90" aria-label="Next slide">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content absolute inset-0 z-10 h-full flex items-center transition-all duration-[600ms]" style="opacity:1;transform:translateY(0)">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 w-full">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full"></span>
+              Digital Transformation
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold leading-[1.05] mb-6 gradient-text-hero">AI-Native Global Digital Engineering Partner</h1>
+            <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8 max-w-xl">Product Development · Digital Transformation · Agile Teams</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 bg-[#6366f1] text-white hover:bg-[#5558e6] hover:shadow-[0_0_30px_rgba(99,102,241,0.35)] active:scale-[0.98]">
+                LET'S CONNECT
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content absolute inset-0 z-10 h-full flex items-center transition-all duration-[600ms]" style="opacity:0;transform:translateY(30px)">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 w-full">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full"></span>
+              AI &amp; Automation
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold leading-[1.05] mb-6 gradient-text-hero">Intelligent Solutions for Modern Enterprises</h1>
+            <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8 max-w-xl">Leverage AI-powered automation, predictive analytics, and machine learning to transform your business operations and accelerate growth.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="services.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 border border-white/25 text-white hover:bg-white/10 active:scale-[0.98]">
+                LEARN MORE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content absolute inset-0 z-10 h-full flex items-center transition-all duration-[600ms]" style="opacity:0;transform:translateY(30px)">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 w-full">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full"></span>
+              Enterprise Platforms
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold leading-[1.05] mb-6 gradient-text-hero">Managed Service Provider for Enterprises</h1>
+            <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8 max-w-xl">End-to-end IT managed services that optimize your infrastructure, reduce costs, and ensure business continuity with 24/7 expert support.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="services.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 border border-white/25 text-white hover:bg-white/10 active:scale-[0.98]">
+                LEARN MORE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content absolute inset-0 z-10 h-full flex items-center transition-all duration-[600ms]" style="opacity:0;transform:translateY(30px)">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 w-full">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full"></span>
+              Cloud Solutions
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold leading-[1.05] mb-6 gradient-text-hero">Modernize Enterprise Cloud Infrastructure</h1>
+            <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8 max-w-xl">Migrate, optimize, and scale your cloud environment with AWS, Azure, and Google Cloud — reducing costs while maximizing performance.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="services.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 border border-white/25 text-white hover:bg-white/10 active:scale-[0.98]">
+                LEARN MORE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content absolute inset-0 z-10 h-full flex items-center transition-all duration-[600ms]" style="opacity:0;transform:translateY(30px)">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 w-full">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full"></span>
+              Cybersecurity
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold leading-[1.05] mb-6 gradient-text-hero">Enterprise-Grade Security Solutions</h1>
+            <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8 max-w-xl">Protect your digital assets with advanced threat detection, zero-trust architecture, compliance management, and 24/7 security operations.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="services.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 border border-white/25 text-white hover:bg-white/10 active:scale-[0.98]">
+                LEARN MORE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. OUR EXPERTISE — Horizontal link row ===== -->
+    <section class="bg-[#0a0a0a] border-b border-[#1f1f1f] py-6" aria-label="Our expertise">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-x-10 gap-y-3">
+          <a href="services.html#ai" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">AI &amp; Data Solutions</a>
+          <a href="services.html#web" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">Software Development</a>
+          <a href="services.html#strategy" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">Strategy &amp; Consulting</a>
+          <a href="services.html#erp" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">Enterprise Platforms</a>
+          <a href="services.html#cloud" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">Cloud &amp; DevOps</a>
+          <a href="services.html#security" class="text-[#9a9a9a] text-sm font-medium hover:text-white transition-colors duration-200">Cybersecurity</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. STICKY ANCHOR BAR ===== -->
+    <section class="sticky top-[72px] z-30 bg-black/90 backdrop-blur-xl border-b border-[#1f1f1f] hidden md:block" aria-label="Section navigation">
+      <div class="max-w-7xl mx-auto px-6">
+        <nav class="flex items-center gap-1 overflow-x-auto py-2" aria-label="Jump to section">
+          <a href="#clients" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            CLIENTS
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a href="#case-studies" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            CASE STUDIES
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a href="#advantages" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            ADVANTAGES
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a href="#awards" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            AWARDS
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a href="#insights" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            INSIGHTS
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a href="#team" class="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#636363] hover:text-white transition-colors whitespace-nowrap rounded-full hover:bg-white/5">
+            TEAM
+            <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== 4. CLIENT LOGOS — Light section ===== -->
+    <section id="clients" class="section-light py-20 relative z-10" aria-label="Trusted by leading enterprises">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="badge-light mb-4">Trusted By</span>
+          <h2 class="text-2xl md:text-3xl font-bold mt-3 text-[#0d0d0d]">Our Best Clients</h2>
+          <p class="text-[#6b7280] text-sm mt-2 max-w-md mx-auto">Proud to serve leading organizations across Pakistan and internationally.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
+          <div class="client-logo-card">
+            <img src="clients/clients_img1.jpg" alt="National Medical Centre logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+          <div class="client-logo-card">
+            <img src="clients/clients_img2.jpg" alt="Benztech Solutions logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+          <div class="client-logo-card">
+            <img src="clients/clients_img3.jpg" alt="Foundation Securities logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+          <div class="client-logo-card">
+            <img src="clients/clients_img4.png" alt="Kolson logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+          <div class="client-logo-card">
+            <img src="clients/clients_img5.png" alt="Amna logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+          <div class="client-logo-card">
+            <img src="clients/clients_img6.png" alt="CP logo" class="h-12 md:h-14 w-full object-contain" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4.5. SERVICES — Light gray section ===== -->
+    <section id="services" class="section-light-gray py-20 relative z-10" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="badge-light mb-4">What We Do</span>
+          <h2 id="services-heading" class="text-2xl md:text-3xl font-bold mt-3 text-[#0d0d0d]">Our Core Services</h2>
+          <p class="text-[#6b7280] text-sm mt-2 max-w-lg mx-auto">Comprehensive technology solutions tailored to your business needs — from infrastructure to digital transformation.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #6366f115">🛡️</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">Network Security</h3>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Cisco and multi-vendor installations of any scale. Boost network performance and protect your infrastructure with industry-leading technology.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #10b98115">📋</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">Service Level Agreements</h3>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Expert SLA coverage with 24×7 operations, resident engineers, and remote monitoring. Maximum uptime guaranteed.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #f59e0b15">🖥️</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">Comms Room Services</h3>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Structured cabling, fiber optic backbone, CCTV and access control — complete server room infrastructure design.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #6366f115">🌐</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">Website Development</h3>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style="background: #6366f1">NEW</span>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Corporate websites, e-commerce, landing pages, UI/UX design and progressive web apps built to convert visitors.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #10b98115">📊</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">ERPNext Implementation</h3>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style="background: #10b981">NEW</span>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Complete ERPNext — accounting, HR &amp; payroll, inventory, CRM, manufacturing and project management.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7 group">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl" style="background: #f59e0b15">🤖</div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-lg font-bold text-[#0d0d0d]">AI Automation</h3>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style="background: #f59e0b">NEW</span>
+            </div>
+            <p class="text-[#6b7280] text-sm leading-relaxed">AI-powered chatbots, intelligent workflow automation, and predictive analytics to streamline your operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CASE STUDIES ===== -->
+    <section id="case-studies" class="py-20 relative z-10" aria-labelledby="cs-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12">
+          <h2 id="cs-heading" class="text-2xl md:text-3xl font-bold mb-3 text-[#e8e8e8]">Proven solutions. Real-world impact.</h2>
+          <p class="text-[#636363] text-sm max-w-xl">Explore how our teams solve critical business problems through strategy, engineering, and innovation.</p>
+        </div>
+
+        <!-- Case Study Slider -->
+        <div class="relative">
+          <!-- CS Slide 0 -->
+          <div class="cs-slide relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden transition-all duration-[600ms]" style="opacity:1;transform:scale(1);position:relative;pointer-events:auto">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=800&fit=crop&auto=format" alt="Automated property appraisal detection system" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+              <span class="inline-block bg-[#6366f1]/15 border border-[#6366f1]/25 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit uppercase tracking-wider">Artificial Intelligence</span>
+              <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">Automated property appraisal detection system</h3>
+              <p class="text-white/60 text-sm md:text-base mb-6 leading-relaxed">Built an AI-powered computer vision system that automates property assessments with 99% accuracy, reducing manual inspection time by 80%.</p>
+              <div class="flex gap-8 mb-8">
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">99%</div>
+                  <div class="text-white/40 text-xs mt-1">Detection accuracy</div>
+                </div>
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">80%</div>
+                  <div class="text-white/40 text-xs mt-1">Time reduction</div>
+                </div>
+              </div>
+              <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#d0d1fb] transition-colors w-fit">
+                Read case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- CS Slide 1 -->
+          <div class="cs-slide absolute inset-0 h-[500px] md:h-[600px] rounded-2xl overflow-hidden transition-all duration-[600ms]" style="opacity:0;transform:scale(1.02);position:absolute;pointer-events:none">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=800&fit=crop&auto=format" alt="Caregiver support platform" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+              <span class="inline-block bg-[#6366f1]/15 border border-[#6366f1]/25 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit uppercase tracking-wider">Healthcare</span>
+              <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">Caregiver support platform</h3>
+              <p class="text-white/60 text-sm md:text-base mb-6 leading-relaxed">Developed a comprehensive digital platform connecting caregivers with patients, achieving 50% cost reduction through intelligent matching algorithms.</p>
+              <div class="flex gap-8 mb-8">
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">50%</div>
+                  <div class="text-white/40 text-xs mt-1">Cost reduction</div>
+                </div>
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">3x</div>
+                  <div class="text-white/40 text-xs mt-1">Patient satisfaction</div>
+                </div>
+              </div>
+              <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#d0d1fb] transition-colors w-fit">
+                Read case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- CS Slide 2 -->
+          <div class="cs-slide absolute inset-0 h-[500px] md:h-[600px] rounded-2xl overflow-hidden transition-all duration-[600ms]" style="opacity:0;transform:scale(1.02);position:absolute;pointer-events:none">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&h=800&fit=crop&auto=format" alt="Dynamic digital banking payment solution" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+              <span class="inline-block bg-[#6366f1]/15 border border-[#6366f1]/25 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit uppercase tracking-wider">Fintech</span>
+              <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">Dynamic digital banking payment solution</h3>
+              <p class="text-white/60 text-sm md:text-base mb-6 leading-relaxed">Engineered a next-gen payment processing platform handling millions of transactions daily with real-time fraud detection and compliance.</p>
+              <div class="flex gap-8 mb-8">
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">$2B+</div>
+                  <div class="text-white/40 text-xs mt-1">Transactions processed</div>
+                </div>
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">99.99%</div>
+                  <div class="text-white/40 text-xs mt-1">Uptime</div>
+                </div>
+              </div>
+              <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#d0d1fb] transition-colors w-fit">
+                Read case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- CS Slide 3 -->
+          <div class="cs-slide absolute inset-0 h-[500px] md:h-[600px] rounded-2xl overflow-hidden transition-all duration-[600ms]" style="opacity:0;transform:scale(1.02);position:absolute;pointer-events:none">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=800&fit=crop&auto=format" alt="Healthcare support platform with agentic AI" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+              <span class="inline-block bg-[#6366f1]/15 border border-[#6366f1]/25 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit uppercase tracking-wider">AI &amp; Automation</span>
+              <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">Healthcare support platform with agentic AI</h3>
+              <p class="text-white/60 text-sm md:text-base mb-6 leading-relaxed">Created an AI-first healthcare platform using autonomous agents to triage patients, schedule appointments, and provide 24/7 medical guidance.</p>
+              <div class="flex gap-8 mb-8">
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">24/7</div>
+                  <div class="text-white/40 text-xs mt-1">AI availability</div>
+                </div>
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">60%</div>
+                  <div class="text-white/40 text-xs mt-1">Load reduction</div>
+                </div>
+              </div>
+              <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#d0d1fb] transition-colors w-fit">
+                Read case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- CS Slide 4 -->
+          <div class="cs-slide absolute inset-0 h-[500px] md:h-[600px] rounded-2xl overflow-hidden transition-all duration-[600ms]" style="opacity:0;transform:scale(1.02);position:absolute;pointer-events:none">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=800&fit=crop&auto=format" alt="Order management automation for telecom" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            <div class="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+              <span class="inline-block bg-[#6366f1]/15 border border-[#6366f1]/25 text-[#d0d1fb] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit uppercase tracking-wider">Enterprise</span>
+              <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">Order management automation for telecom</h3>
+              <p class="text-white/60 text-sm md:text-base mb-6 leading-relaxed">Automated end-to-end order management for a major telecom provider, eliminating revenue leakage and reducing processing time by 80%.</p>
+              <div class="flex gap-8 mb-8">
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">80%</div>
+                  <div class="text-white/40 text-xs mt-1">Faster processing</div>
+                </div>
+                <div>
+                  <div class="text-3xl md:text-4xl font-bold text-white" style="font-variant-numeric: tabular-nums">$1.7M+</div>
+                  <div class="text-white/40 text-xs mt-1">Revenue recovered</div>
+                </div>
+              </div>
+              <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#d0d1fb] transition-colors w-fit">
+                Read case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- CS Nav Buttons -->
+          <button id="cs-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 active:scale-90" aria-label="Previous case study">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button id="cs-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 active:scale-90" aria-label="Next case study">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </button>
+
+          <!-- CS Buttons -->
+          <div class="flex justify-center gap-1 mt-6">
+            <button class="cs-btn active flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300 bg-[#6366f1] text-white">
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+              <span class="hidden md:inline">Artificial Intelligence</span>
+            </button>
+            <button class="cs-btn inactive flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300 bg-[#121212] text-[#636363] border border-[#2a2a2a] hover:text-white hover:border-[#444]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#444]"></span>
+              <span class="hidden md:inline">Healthcare</span>
+            </button>
+            <button class="cs-btn inactive flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300 bg-[#121212] text-[#636363] border border-[#2a2a2a] hover:text-white hover:border-[#444]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#444]"></span>
+              <span class="hidden md:inline">Fintech</span>
+            </button>
+            <button class="cs-btn inactive flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300 bg-[#121212] text-[#636363] border border-[#2a2a2a] hover:text-white hover:border-[#444]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#444]"></span>
+              <span class="hidden md:inline">AI &amp; Automation</span>
+            </button>
+            <button class="cs-btn inactive flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300 bg-[#121212] text-[#636363] border border-[#2a2a2a] hover:text-white hover:border-[#444]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#444]"></span>
+              <span class="hidden md:inline">Enterprise</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="portfolio.html" class="inline-flex items-center gap-2 bg-[#6366f1] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#5558e6] transition-all duration-200 active:scale-[0.98]">
+            All Case Studies
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. MID-PAGE CTA BANNER ===== -->
+    <section class="py-16 relative z-10 bg-[#6366f1]/5 border-y border-[#1f1f1f]">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 text-[#e8e8e8]">Build custom, AI-native solutions that deliver real business value</h2>
+          <p class="text-[#636363] text-sm">From strategy to deployment — we engineer intelligent products that scale.</p>
+        </div>
+        <a href="services.html" class="inline-flex items-center gap-2 border border-[#2a2a2a] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/5 hover:border-[#6366f1]/30 transition-all duration-200 whitespace-nowrap active:scale-[0.98]">
+          Learn More
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 7. ADVANTAGES — Light gray 3x2 grid ===== -->
+    <section id="advantages" class="section-light-gray py-20 relative z-10" aria-labelledby="adv-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12">
+          <span class="badge-light mb-4">Why Inspired</span>
+          <h2 id="adv-heading" class="text-2xl md:text-3xl font-bold mb-3 mt-3 text-[#0d0d0d]">The Inspired Technology difference</h2>
+          <p class="text-[#6b7280] text-sm max-w-xl">We don't just build software. We provide the strategic depth and technical precision required to dominate your market.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🤖</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">AI experts</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Our AI Launchpad accelerates innovation with pre-built models, custom training, and production-ready deployment pipelines.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🏆</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Industry expertise</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Deep industry insight across healthcare, finance, retail, and enterprise — we speak your language.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🛡️</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Product mindset</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">We deliver outcomes, not just outputs. Every solution is designed for measurable business impact.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🚀</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Delivery excellence</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Deep technical expertise with agile methodology ensures on-time, on-budget delivery of complex projects.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🌍</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Global scale</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Experts across four continents with nearshore and offshore teams available in any time zone.</p>
+          </div>
+          <div class="card-light-on-gray rounded-2xl p-7">
+            <div class="w-12 h-12 bg-[#6366f1]/10 rounded-xl flex items-center justify-center mb-4 text-2xl">🔒</div>
+            <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Security first</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed">Security built into every layer — from architecture design to deployment, meeting all regulatory requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. CERTIFICATIONS ===== -->
+    <section id="awards" class="py-20 bg-[#0a0a0a] relative z-10" aria-labelledby="awards-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 id="awards-heading" class="text-2xl md:text-3xl font-bold mb-10 text-[#e8e8e8]">Professional Cisco Training</h2>
+        <p class="text-[#9a9a9a] text-sm mb-8 max-w-xl">Industry-recognized Cisco certifications to advance your networking career and skills.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 flex items-start gap-4 hover-glow">
+            <div class="w-10 h-10 bg-[#6366f1]/10 rounded-xl flex items-center justify-center shrink-0 text-xl">🎓</div>
+            <p class="text-[#9a9a9a] text-sm leading-relaxed">Cisco CCNA — Validates ability to install, configure, operate and troubleshoot medium-size routed and switched networks</p>
+          </div>
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 flex items-start gap-4 hover-glow">
+            <div class="w-10 h-10 bg-[#6366f1]/10 rounded-xl flex items-center justify-center shrink-0 text-xl">🏆</div>
+            <p class="text-[#9a9a9a] text-sm leading-relaxed">Cisco CCNP — Advanced certification for designing, implementing and troubleshooting enterprise networks</p>
+          </div>
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 flex items-start gap-4 hover-glow">
+            <div class="w-10 h-10 bg-[#6366f1]/10 rounded-xl flex items-center justify-center shrink-0 text-xl">📡</div>
+            <p class="text-[#9a9a9a] text-sm leading-relaxed">CCNA Wireless — Covers wireless network fundamentals, security considerations, and client access implementation</p>
+          </div>
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 flex items-start gap-4 hover-glow">
+            <div class="w-10 h-10 bg-[#6366f1]/10 rounded-xl flex items-center justify-center shrink-0 text-xl">🔒</div>
+            <p class="text-[#9a9a9a] text-sm leading-relaxed">CCNA Security — Confirms associate-level skills to secure Cisco networks and threat recognition</p>
+          </div>
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 flex items-start gap-4 hover-glow">
+            <div class="w-10 h-10 bg-[#6366f1]/10 rounded-xl flex items-center justify-center shrink-0 text-xl">✅</div>
+            <p class="text-[#9a9a9a] text-sm leading-relaxed">ISO 9001:2015 Certified — International standard for quality management systems</p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="about.html" class="inline-flex items-center gap-2 text-[#818cf8] text-sm font-semibold hover:text-white transition-colors duration-200">
+            All Awards
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. INSIGHTS — Light section ===== -->
+    <section id="insights" class="section-light py-20 relative z-10" aria-labelledby="insights-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-10">
+          <span class="badge-light mb-4">Latest Insights</span>
+          <h2 id="insights-heading" class="text-2xl md:text-3xl font-bold mt-3 text-[#0d0d0d]">Knowledge Hub</h2>
+          <p class="text-[#6b7280] text-sm mt-2">Expert articles on technology trends across Pakistan, USA, Middle East and beyond.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&auto=format" alt="How AI is transforming enterprise operations in 2026" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">AI</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">How AI is transforming enterprise operations in 2026</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">Explore the latest AI trends reshaping how businesses operate, from autonomous agents to predictive analytics.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop&auto=format" alt="Multi-cloud strategies for enterprise resilience" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">CLOUD</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">Multi-cloud strategies for enterprise resilience</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">Why leading enterprises are adopting multi-cloud architectures and how to implement them effectively.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&auto=format" alt="Zero-trust security: A complete implementation guide" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">SECURITY</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">Zero-trust security: A complete implementation guide</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">Step-by-step guide to implementing zero-trust architecture in your organization.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=400&fit=crop&auto=format" alt="The future of DevOps: AI-powered pipelines" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">DEVOPS</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">The future of DevOps: AI-powered pipelines</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">How machine learning is automating CI/CD, testing, and infrastructure management.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format" alt="Digital transformation ROI: Measuring what matters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">ENTERPRISE</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">Digital transformation ROI: Measuring what matters</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">Key metrics and frameworks for tracking the success of your digital transformation initiatives.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+          <div class="group relative bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden cursor-pointer card-light" style="box-shadow: 0 1px 4px rgba(0,0,0,0.06)">
+            <div class="relative overflow-hidden h-52">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format" alt="Building a data-driven culture in your organization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-2 inline-block">DATA</span>
+              <h4 class="text-[#0d0d0d] text-lg font-bold mb-2 leading-snug">Building a data-driven culture in your organization</h4>
+              <p class="text-[#6b7280] text-sm mb-4 leading-relaxed line-clamp-2">Practical steps to foster data literacy and enable informed decision-making across teams.</p>
+              <span class="inline-flex items-center gap-2 text-[#6366f1] text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                Read More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 10. TAGLINE REVEAL ===== -->
+    <section class="py-28 md:py-36 relative z-10 overflow-hidden" aria-label="Company tagline">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] max-w-[680px]" style="text-wrap: balance;">
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">We</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">engineer</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">digital</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">products</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">that</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">move</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">industries</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">forward</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">from</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">concept</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">to</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">scale</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">across</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">every</span>
+          <span class="inline-block mr-[0.3em] text-[#e8e8e8]">continent</span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- ===== 11. ANIMATED CTA — "Let us accelerate your..." ===== -->
+    <section class="py-20 relative z-10 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 text-[#e8e8e8]">
+          Let us accelerate your&nbsp;
+          <span class="text-[#818cf8] inline-block relative h-[1.2em] overflow-hidden align-bottom">
+            <span id="rotating-word" class="absolute left-0 whitespace-nowrap transition-all duration-[400ms]" style="opacity:1;transform:translateY(0)">Software Development</span>
+          </span>
+        </h2>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-sm font-bold hover:bg-white/90 transition-all duration-200 active:scale-[0.98]">
+          Let's talk
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 12. TEAM — Photo scroller + Map + Stats ===== -->
+    <section id="team" class="py-20 bg-[#0a0a0a] relative z-10 overflow-hidden" aria-labelledby="team-heading">
+      <div class="max-w-7xl mx-auto px-6 mb-12">
+        <h2 id="team-heading" class="text-2xl md:text-3xl font-bold mb-3 text-[#e8e8e8]">We're a global team of innovators</h2>
+        <p class="text-[#636363] text-sm max-w-xl">Navigate complex digital initiatives with confidence.</p>
+      </div>
+
+      <div class="relative mb-16 overflow-hidden">
+        <div class="flex gap-4 animate-marquee-fast" style="width: max-content;">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <!-- Duplicate set for seamless loop -->
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop&auto=format" alt="Team member" class="w-64 h-44 object-cover rounded-xl shrink-0" loading="lazy">
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative bg-[#121212] border border-[#2a2a2a] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <svg viewBox="0 0 800 400" class="w-full h-auto opacity-15">
+            <ellipse cx="400" cy="200" rx="350" ry="150" fill="none" stroke="#6366f1" stroke-width="0.5"></ellipse>
+            <ellipse cx="400" cy="200" rx="250" ry="100" fill="none" stroke="#6366f1" stroke-width="0.3"></ellipse>
+            <line x1="50" y1="200" x2="750" y2="200" stroke="#6366f1" stroke-width="0.3"></line>
+            <line x1="400" y1="50" x2="400" y2="350" stroke="#6366f1" stroke-width="0.3"></line>
+            <circle cx="180" cy="180" r="4" fill="#6366f1" opacity="0.5"></circle>
+            <circle cx="350" cy="160" r="4" fill="#6366f1" opacity="0.65"></circle>
+            <circle cx="420" cy="150" r="4" fill="#6366f1" opacity="0.8"></circle>
+            <circle cx="550" cy="190" r="4" fill="#6366f1" opacity="0.5"></circle>
+            <circle cx="600" cy="170" r="4" fill="#6366f1" opacity="0.65"></circle>
+            <circle cx="250" cy="220" r="4" fill="#6366f1" opacity="0.8"></circle>
+            <circle cx="480" cy="230" r="4" fill="#6366f1" opacity="0.5"></circle>
+            <circle cx="650" cy="200" r="4" fill="#6366f1" opacity="0.65"></circle>
+            <circle cx="150" cy="200" r="4" fill="#6366f1" opacity="0.8"></circle>
+            <circle cx="300" cy="250" r="4" fill="#6366f1" opacity="0.5"></circle>
+          </svg>
+        </div>
+        <div class="space-y-8">
+          <div>
+            <div class="text-4xl font-bold text-white mb-1" style="font-variant-numeric: tabular-nums">4</div>
+            <div class="text-[#9a9a9a] text-sm">continents</div>
+            <div class="text-[#636363] text-xs mt-1">North America, South America, Europe &amp; Asia</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-white mb-1" style="font-variant-numeric: tabular-nums">1,400+</div>
+            <div class="text-[#9a9a9a] text-sm">team of global creators &amp; innovators</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-white mb-1" style="font-variant-numeric: tabular-nums">40%</div>
+            <div class="text-[#9a9a9a] text-sm">of our global workforce are women</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 overflow-hidden border-t border-[#1f1f1f] pt-6">
+        <div class="flex gap-6 animate-marquee-fast" style="width: max-content;">
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Karachi<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Lahore<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Islamabad<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Dubai<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">London<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">New York<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">San Francisco<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Toronto<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <!-- Duplicate for seamless loop -->
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Karachi<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Lahore<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Islamabad<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Dubai<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">London<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">New York<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">San Francisco<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+          <span class="text-[#636363] text-sm whitespace-nowrap flex items-center gap-3">Toronto<span class="w-1.5 h-1.5 bg-[#6366f1] rounded-full opacity-30"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 13. CONTACT — 3-step process ===== -->
+    <section class="py-20 relative z-10" aria-labelledby="contact-heading">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold mb-8 text-[#e8e8e8]">Let's talk</h2>
+          <div class="space-y-0">
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-[#818cf8] text-sm font-bold">1</span>
+                </div>
+                <div class="w-px h-16 bg-[#1f1f1f]"></div>
+              </div>
+              <div class="pb-8">
+                <h3 class="text-[#e8e8e8] font-bold text-lg mb-1">Hop on a discovery call</h3>
+                <p class="text-[#636363] text-sm leading-relaxed">We learn about your business, explore your goals, timeline, and budget to understand exactly what you need.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-[#818cf8] text-sm font-bold">2</span>
+                </div>
+                <div class="w-px h-16 bg-[#1f1f1f]"></div>
+              </div>
+              <div class="pb-8">
+                <h3 class="text-[#e8e8e8] font-bold text-lg mb-1">Identify the right solution together</h3>
+                <p class="text-[#636363] text-sm leading-relaxed">Shape a project plan, select the right team, and define clear milestones for delivery.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-[#818cf8] text-sm font-bold">3</span>
+                </div>
+              </div>
+              <div class="pb-8">
+                <h3 class="text-[#e8e8e8] font-bold text-lg mb-1">Get started and accelerate fast</h3>
+                <p class="text-[#636363] text-sm leading-relaxed">Regular updates, flexible adjustments, and agile delivery to bring your vision to life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=600&fit=crop&auto=format" alt="Team collaboration" class="w-full h-[500px] object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f]" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
+          <!-- Column 1: Brand Info -->
+          <div class="lg:col-span-4">
+            <a href="index.html" class="flex items-center gap-2.5 mb-5" aria-label="Inspired Technology - Home">
+              <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+            </a>
+            <p class="text-[#636363] text-sm leading-relaxed max-w-sm mb-6">Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.</p>
+            <div class="flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/www.inspired.com.pk/" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-white" aria-label="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63c-.01-.9-.74-1.63-1.63-1.63Z" />
+                </svg>
+              </a>
+              <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-emerald-400" aria-label="WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.23-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29-.25-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.25-.64.79-.79.95-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.47Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Solutions -->
+          <div class="lg:col-span-3">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services &amp; Solutions</h3>
+            <ul class="space-y-2.5" role="list">
+              <li><a href="web-development.html" class="text-[#636363] text-sm hover:text-white transition-colors">Website Development</a></li>
+              <li><a href="erpnext.html" class="text-[#636363] text-sm hover:text-white transition-colors">ERPNext Implementation</a></li>
+              <li><a href="ai-automation.html" class="text-[#636363] text-sm hover:text-white transition-colors">AI Automation &amp; Agents</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Network Security &amp; Firewalls</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">24/7 SLA Operations</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Structured Data Cabling</a></li>
+              <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">CCTV &amp; IP Surveillance</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company -->
+          <div class="lg:col-span-2">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h3>
+            <ul class="space-y-2.5" role="list">
+              <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">About Us</a></li>
+              <li><a href="portfolio.html" class="text-[#636363] text-sm hover:text-white transition-colors">Case Studies &amp; Portfolio</a></li>
+              <li><a href="about.html#story-heading" class="text-[#636363] text-sm hover:text-white transition-colors">Leadership &amp; Story</a></li>
+              <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">Our Best Clients</a></li>
+              <li><a href="contact.html" class="text-[#636363] text-sm hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Global Hubs -->
+          <div class="lg:col-span-3">
+            <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Global Locations</h3>
+            <div class="space-y-3 text-xs">
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">Pakistan HQ</div>
+                <div class="text-[#818cf8] mb-0.5">+92 300 9221193</div>
+                <div class="text-[#636363]">Main Shahrah-e-Faisal, Karachi</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">United States</div>
+                <div class="text-[#818cf8] mb-0.5">+1 (973) 626-0873</div>
+                <div class="text-[#636363]">80 Addison Ave, Rockaway, NJ</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+                <div class="font-bold text-[#e8e8e8] mb-0.5">International</div>
+                <div class="text-[#818cf8] mb-0.5">+49 1575 5769970</div>
+                <div class="text-[#636363]">European Representation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#636363]">
+          <div>&copy; 2026 Inspired Technology Pvt. Ltd. All rights reserved.</div>
+          <div class="flex gap-6">
+            <a href="about.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="about.html" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Security Overview</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

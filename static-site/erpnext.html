@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERPNext Implementation &amp; Customization — Inspired Technology</title>
+  <meta name="description" content="Complete open-source ERPNext implementation covering Financials, ZATCA e-Invoicing compliance, HRMS & Payroll, Inventory, and Manufacturing for Middle East and Pakistan.">
+  <link rel="icon" type="image/png" href="clients/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="site-header" class="header-scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Inspired Technology - Home">
+        <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+      </a>
+      <div class="hidden lg:flex items-center gap-1" role="menubar">
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Company</a>
+        <div id="services-dropdown" class="relative">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg flex items-center gap-1.5 text-white bg-white/10">
+            Services
+            <svg class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div id="services-dropdown-menu" class="absolute top-full left-0 mt-2 w-80 bg-[#121212] border border-[#2a2a2a] rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl opacity-0 pointer-events-none translate-y-2 scale-95 transition-all duration-200">
+            <div class="space-y-1">
+              <a href="web-development.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">Website Development</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">NEW</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Next.js web apps, Headless e-commerce & PWAs</span>
+              </a>
+              <a href="erpnext.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">ERPNext Implementation</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">ZATCA</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">ZATCA compliance, Accounting, HRMS & Supply Chain</span>
+              </a>
+              <a href="ai-automation.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">AI Automation & Agents</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">AI</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Autonomous LLM agents, Enterprise RAG & OCR</span>
+              </a>
+              <a href="services.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">All Services & Infrastructure</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">15+ Yrs</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Cisco networking, Data cabling, CCTV & 24/7 SLAs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="portfolio.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Portfolio</a>
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">About</a>
+        <a href="contact.html" class="ml-4 btn btn-primary btn-sm">Contact Us</a>
+      </div>
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl lg:hidden pt-[72px] overflow-y-auto translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col p-6 gap-2">
+      <div class="flex justify-end mb-4">
+        <button id="mobile-menu-close" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Company</a>
+      <div>
+        <button id="mobile-services-btn" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8] w-full flex items-center justify-between">
+          <span>Services</span>
+          <svg class="mobile-arrow w-5 h-5 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-sub" class="pl-4 space-y-3 py-2 border-l border-[#2a2a2a] my-2 max-h-96 overflow-hidden transition-all duration-300">
+          <a href="web-development.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">Website Development</a>
+          <a href="erpnext.html" class="block text-sm text-white py-1">ERPNext Implementation</a>
+          <a href="ai-automation.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">AI Automation & Agents</a>
+          <a href="services.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">All Services & Infrastructure</a>
+        </div>
+      </div>
+      <a href="portfolio.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Portfolio</a>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">About Us</a>
+      <div class="mt-8">
+        <a href="contact.html" class="btn btn-primary w-full">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- Hero Section (Dark) -->
+    <section class="pt-32 pb-24 bg-[#0a0a0a] relative overflow-hidden" aria-labelledby="erp-hero-heading">
+      <div class="absolute inset-0 opacity-15" aria-hidden="true">
+        <div class="absolute inset-0" style="background-image: radial-gradient(rgba(16,185,129,0.2) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap items-center gap-2 mb-6">
+          <a href="index.html" class="text-[#636363] hover:text-white text-xs transition-colors">Home</a>
+          <span class="text-[#454545] text-xs">/</span>
+          <a href="services.html" class="text-[#636363] hover:text-white text-xs transition-colors">Services</a>
+          <span class="text-[#454545] text-xs">/</span>
+          <span class="text-emerald-400 text-xs font-semibold">ERPNext Implementation</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <span class="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Certified ERPNext Consultants
+            </span>
+
+            <h1 id="erp-hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#e8e8e8] leading-[1.08] tracking-tight">
+              Digitize Your Entire Enterprise with <span class="bg-gradient-to-r from-emerald-400 to-teal-200 bg-clip-text text-transparent">ERPNext</span>
+            </h1>
+
+            <p class="text-[#9a9a9a] text-base md:text-lg max-w-2xl leading-relaxed mb-8">
+              Eliminate disconnected spreadsheets and expensive legacy software. We implement end-to-end ERPNext solutions — from accounting and supply chain to HRMS and manufacturing — tailored to your region and ZATCA regulations.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mb-10">
+              <a href="contact.html" class="bg-emerald-600 text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-emerald-500 transition-all duration-200 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] active:scale-[0.98] inline-flex items-center gap-2">
+                Schedule an ERP Demo
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a href="#modules" class="border border-[#2a2a2a] text-[#e8e8e8] px-7 py-4 rounded-full text-sm font-semibold hover:bg-white/5 hover:border-emerald-500/40 transition-all duration-200 active:scale-[0.98]">
+                View Modules
+              </a>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#1f1f1f]">
+              <div>
+                <div class="text-2xl md:text-3xl font-bold text-white mb-1">50+</div>
+                <div class="text-[#636363] text-xs">ERP Deployments</div>
+              </div>
+              <div>
+                <div class="text-2xl md:text-3xl font-bold text-white mb-1">100%</div>
+                <div class="text-[#636363] text-xs">ZATCA Compliant</div>
+              </div>
+              <div>
+                <div class="text-2xl md:text-3xl font-bold text-white mb-1">40%</div>
+                <div class="text-[#636363] text-xs">OpEx Reduction</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl overflow-hidden border border-[#2a2a2a] shadow-2xl bg-[#121212]">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format" alt="ERP dashboard analytics" class="w-full h-[400px] object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/80 backdrop-blur-md border border-white/10">
+                <div class="flex items-center justify-between text-xs text-white/90 mb-2">
+                  <span class="font-semibold text-emerald-400">Total License Fees</span>
+                  <span class="font-bold text-white">$0.00 / user (Open Source)</span>
+                </div>
+                <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-emerald-400 h-full w-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Grid (Light Section) -->
+    <section id="modules" class="section-light py-24 relative z-10" aria-labelledby="modules-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="badge-light mb-4" style="color: #059669; border-color: #a7f3d0; background: #ecfdf5;">Comprehensive Suite</span>
+          <h2 id="modules-heading" class="text-3xl md:text-4xl font-bold mt-3 text-[#0d0d0d]">
+            All Business Modules in One Single Unified Database
+          </h2>
+          <p class="text-[#6b7280] text-base mt-3 max-w-2xl mx-auto leading-relaxed">
+            Experience seamless data flow between finance, supply chain, production, and human resources without double entry or reconciliation errors.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Module 1 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">💰</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Core Financials</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">Financial Accounting &amp; Tax</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Multi-currency general ledger, automated reconciliation, accounts payable/receivable, asset management, and automated tax compliance.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Chart of Accounts customization
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Automated bank feed reconciliation
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                P&amp;L, Balance Sheet &amp; Cash Flow reports
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Multi-currency &amp; multi-company consolidation
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">📦</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Logistics</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">Supply Chain &amp; Inventory</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Real-time stock tracking across multiple warehouses, batch &amp; serialized tracking, automated reorder triggers, and landed cost computation.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Multi-warehouse batch &amp; expiry tracking
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Automated Purchase Orders &amp; RFQs
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Barcode &amp; QR scanning integration
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Stock valuation (FIFO/Moving Average)
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">👥</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Workforce</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">HRMS &amp; Automated Payroll</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Comprehensive employee management, automated attendance (biometric integration), leave policies, expense claims, and WPS/bank payroll disbursement.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Biometric attendance machine sync
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Salary slips &amp; automated tax deductions
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Self-service employee portal (mobile app)
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Performance reviews &amp; onboarding workflows
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">🏭</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Operations</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">Manufacturing &amp; MRP</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Multi-level Bill of Materials (BOM), production planning tool, capacity planning, workstation management, and job card tracking.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Multi-level Bill of Materials (BOM)
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Work order scheduling &amp; routing
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Scrap &amp; byproduct accounting
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Real-time material consumption analytics
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">🤝</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Growth</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">CRM &amp; Omnichannel Sales</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Lead tracking, quotation generation, automated sales orders, commission management, and pipeline visibility across regional teams.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Lead capture from web forms &amp; WhatsApp
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Quotation to Sales Order conversion
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Customer loyalty &amp; credit limit control
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Sales analytics &amp; territory forecasting
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 6 -->
+          <div class="client-logo-card flex-col items-start text-left p-8 rounded-2xl bg-white border border-[#e5e7eb] hover:border-emerald-500/40">
+            <div class="flex items-center justify-between w-full mb-5">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">🏪</div>
+              <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Retail</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#0d0d0d] mb-3">Point of Sale (POS) &amp; Retail</h3>
+            <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Offline-ready POS interface with touch screens, thermal receipt printing, shift closures, payment terminal integrations, and inventory deductions.</p>
+            <div class="space-y-2 w-full pt-4 border-t border-[#f0f0f0]">
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Offline transaction caching
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Barcode scanning &amp; quick search
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Multiple payment methods &amp; split bills
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-[#374151]">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                Direct integration with central ledger
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZATCA & Regional Compliance Spotlight (Light Gray Section) -->
+    <section class="section-light-gray py-24 relative z-10" aria-labelledby="zatca-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6">
+            <span class="badge-light mb-4" style="color: #059669; border-color: #a7f3d0; background: #ecfdf5;">Middle East &amp; Saudi Arabia</span>
+            <h2 id="zatca-heading" class="text-3xl md:text-4xl font-bold mt-3 text-[#0d0d0d] leading-tight">
+              Official ZATCA Phase 1 &amp; Phase 2 E-Invoicing Integration
+            </h2>
+            <p class="text-[#6b7280] text-sm leading-relaxed mt-4 mb-8">
+              Operating in Saudi Arabia? Avoid severe fines with our compliant Frappe ZATCA e-Invoicing app. We handle end-to-end CSID cryptographic device onboarding and real-time clearance.
+            </p>
+
+            <div class="space-y-4">
+              <div class="bg-white border border-[#e5e7eb] rounded-xl p-5 shadow-sm">
+                <h4 class="text-base font-bold text-[#0d0d0d] mb-1">Phase 1: Generation &amp; Storage</h4>
+                <p class="text-[#6b7280] text-xs leading-relaxed">Compliant tax invoices, debit notes, credit notes with cryptographic hash, formatted UUIDs, and tamper-proof TLV Base64 QR code generation.</p>
+              </div>
+              <div class="bg-white border border-[#e5e7eb] rounded-xl p-5 shadow-sm">
+                <h4 class="text-base font-bold text-[#0d0d0d] mb-1">Phase 2: Integration &amp; Clearance</h4>
+                <p class="text-[#6b7280] text-xs leading-relaxed">Direct API handshake with ZATCA (FATOORA portal), cryptographic stamp integration, automated invoice clearance for B2B and reporting for B2C.</p>
+              </div>
+              <div class="bg-white border border-[#e5e7eb] rounded-xl p-5 shadow-sm">
+                <h4 class="text-base font-bold text-[#0d0d0d] mb-1">Multi-Branch &amp; Multi-Device</h4>
+                <p class="text-[#6b7280] text-xs leading-relaxed">Automated CSID onboarding for multiple POS terminals and warehouse branches across Riyadh, Jeddah, Dammam, and beyond.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="bg-white border border-[#e5e7eb] rounded-2xl p-8 shadow-sm">
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-6">Why Enterprises Switch from SAP/Odoo to ERPNext</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                  <thead>
+                    <tr class="border-b border-[#e5e7eb]">
+                      <th class="pb-3 text-[#6b7280]">Metric</th>
+                      <th class="pb-3 text-emerald-600 font-bold">ERPNext</th>
+                      <th class="pb-3 text-[#9ca3af]">SAP / Oracle</th>
+                      <th class="pb-3 text-[#9ca3af]">Odoo</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-[#f3f4f6]">
+                    <tr>
+                      <td class="py-3.5 font-semibold text-[#374151]">License Cost</td>
+                      <td class="py-3.5 text-emerald-700 font-bold">100% Open Source ($0 License)</td>
+                      <td class="py-3.5 text-[#6b7280]">$3,000+ / user / yr</td>
+                      <td class="py-3.5 text-[#6b7280]">Paid per-module &amp; user</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3.5 font-semibold text-[#374151]">Customizability</td>
+                      <td class="py-3.5 text-emerald-700 font-bold">Complete Frappe Framework code access</td>
+                      <td class="py-3.5 text-[#6b7280]">Expensive ABAP consultants</td>
+                      <td class="py-3.5 text-[#6b7280]">Custom code breaks upgrades</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3.5 font-semibold text-[#374151]">ZATCA Compliance</td>
+                      <td class="py-3.5 text-emerald-700 font-bold">Native Phase 1 &amp; 2 integration</td>
+                      <td class="py-3.5 text-[#6b7280]">Heavy custom middleware</td>
+                      <td class="py-3.5 text-[#6b7280]">Requires third-party apps</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3.5 font-semibold text-[#374151]">Hosting Freedom</td>
+                      <td class="py-3.5 text-emerald-700 font-bold">On-premise or any private cloud</td>
+                      <td class="py-3.5 text-[#6b7280]">Vendor locked-in cloud</td>
+                      <td class="py-3.5 text-[#6b7280]">Odoo.sh or restricted hosting</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3.5 font-semibold text-[#374151]">Implementation Time</td>
+                      <td class="py-3.5 text-emerald-700 font-bold">4 – 8 Weeks average</td>
+                      <td class="py-3.5 text-[#6b7280]">6 – 18 Months</td>
+                      <td class="py-3.5 text-[#6b7280]">3 – 6 Months</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-Phase Implementation Methodology (Dark Section) -->
+    <section class="py-24 bg-[#0a0a0a] relative z-10" aria-labelledby="methodology-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-emerald-400 text-xs font-bold tracking-widest uppercase mb-3 block">// HOW WE EXECUTE</span>
+          <h2 id="methodology-heading" class="text-3xl md:text-4xl font-bold text-[#e8e8e8]">
+            Our Proven ERP Implementation Methodology
+          </h2>
+          <p class="text-[#9a9a9a] text-sm mt-3 max-w-xl mx-auto">
+            Guaranteed on-time, on-budget rollout with zero disruption to active business operations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 hover:border-emerald-500/40 transition-colors flex flex-col justify-between">
+            <div>
+              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block mb-3">Phase 01</span>
+              <h3 class="text-base font-bold text-white mb-2">Process Discovery &amp; Gap Analysis</h3>
+              <p class="text-[#9a9a9a] text-xs leading-relaxed">We map every existing workflow, document business requirements, chart chart of accounts, and define custom module specifications.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#1f1f1f] text-[10px] text-[#636363]">✓ Milestone Sign-off</div>
+          </div>
+
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 hover:border-emerald-500/40 transition-colors flex flex-col justify-between">
+            <div>
+              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block mb-3">Phase 02</span>
+              <h3 class="text-base font-bold text-white mb-2">Configuration &amp; Custom Frappe Apps</h3>
+              <p class="text-[#9a9a9a] text-xs leading-relaxed">We configure workflows, permissions, print formats, custom doctypes, and build tailored Frappe apps for your unique business logic.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#1f1f1f] text-[10px] text-[#636363]">✓ Milestone Sign-off</div>
+          </div>
+
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 hover:border-emerald-500/40 transition-colors flex flex-col justify-between">
+            <div>
+              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block mb-3">Phase 03</span>
+              <h3 class="text-base font-bold text-white mb-2">Data Cleansing &amp; Migration</h3>
+              <p class="text-[#9a9a9a] text-xs leading-relaxed">We extract, clean, and import your historical master data (Customers, Suppliers, Items, Opening Balances) from legacy systems.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#1f1f1f] text-[10px] text-[#636363]">✓ Milestone Sign-off</div>
+          </div>
+
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 hover:border-emerald-500/40 transition-colors flex flex-col justify-between">
+            <div>
+              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block mb-3">Phase 04</span>
+              <h3 class="text-base font-bold text-white mb-2">User Acceptance Testing &amp; Training</h3>
+              <p class="text-[#9a9a9a] text-xs leading-relaxed">Hands-on role-based training for executives, accountants, warehouse staff, and HR managers with tailored video tutorials.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#1f1f1f] text-[10px] text-[#636363]">✓ Milestone Sign-off</div>
+          </div>
+
+          <div class="bg-[#121212] border border-[#2a2a2a] rounded-2xl p-6 hover:border-emerald-500/40 transition-colors flex flex-col justify-between">
+            <div>
+              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block mb-3">Phase 05</span>
+              <h3 class="text-base font-bold text-white mb-2">Go-Live &amp; Dedicated On-Site SLA</h3>
+              <p class="text-[#9a9a9a] text-xs leading-relaxed">Flawless cutover with on-site resident engineers, real-time transaction monitoring, and SLA-backed maintenance.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#1f1f1f] text-[10px] text-[#636363]">✓ Milestone Sign-off</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion (Light Section) -->
+    <section class="section-light py-24 relative z-10" aria-labelledby="erp-faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="badge-light mb-4" style="color: #059669; border-color: #a7f3d0; background: #ecfdf5;">Got Questions?</span>
+          <h2 id="erp-faq-heading" class="text-3xl md:text-4xl font-bold mt-3 text-[#0d0d0d]">
+            ERPNext Implementation FAQs
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden transition-all">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors">
+              <span>What is ERPNext and why should we choose it over SAP or Oracle?</span>
+              <svg class="faq-arrow w-5 h-5 text-emerald-600 shrink-0 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content open px-6 pb-6 text-[#6b7280] text-sm leading-relaxed border-t border-[#f3f4f6] pt-4">
+              ERPNext is an enterprise-grade, 100% open-source ERP built on the modern Frappe Python/JS framework. It eliminates expensive per-user licensing fees while delivering the full functional suite of SAP/Oracle (Accounting, HRMS, Inventory, Manufacturing, CRM) with complete data ownership and total customization freedom.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden transition-all">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors">
+              <span>Are your ERPNext implementations compliant with Saudi ZATCA e-Invoicing?</span>
+              <svg class="faq-arrow w-5 h-5 text-emerald-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-6 text-[#6b7280] text-sm leading-relaxed border-t border-[#f3f4f6] pt-4 hidden">
+              Yes, 100%. We have completed multiple Phase 1 and Phase 2 ZATCA integrations across KSA. We handle CSID cryptographic certificate generation, FATOORA portal onboarding, B2B XML clearance, and B2C reporting APIs.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden transition-all">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors">
+              <span>Can we integrate ERPNext with our existing e-commerce and POS hardware?</span>
+              <svg class="faq-arrow w-5 h-5 text-emerald-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-6 text-[#6b7280] text-sm leading-relaxed border-t border-[#f3f4f6] pt-4 hidden">
+              Absolutely. We regularly integrate ERPNext with Shopify, WooCommerce, custom web stores, biometric time clocks (ZKTeco), barcode scanners, thermal receipt printers, and local bank payment gateways.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden transition-all">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors">
+              <span>Can ERPNext be deployed on our own on-premise servers in Pakistan or Saudi Arabia?</span>
+              <svg class="faq-arrow w-5 h-5 text-emerald-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-6 text-[#6b7280] text-sm leading-relaxed border-t border-[#f3f4f6] pt-4 hidden">
+              Yes. We support on-premise bare-metal deployments inside your server rooms, local data centers, or cloud environments like AWS, DigitalOcean, and Microsoft Azure with automated daily offsite backups.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Banner (Dark CTA) -->
+    <section class="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative overflow-hidden text-center">
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <span class="text-emerald-400 text-xs font-bold tracking-widest uppercase mb-4 block">// READY FOR DIGITAL TRANSFORMATION?</span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
+          Book a Live Tailored ERPNext Demo for Your Industry
+        </h2>
+        <p class="text-[#9a9a9a] text-base max-w-xl mx-auto mb-10 leading-relaxed">
+          See how ERPNext handles your specific invoices, warehouse workflows, payroll, and reports in a live interactive walkthrough with our principal ERP consultant.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="bg-emerald-600 text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-emerald-500 transition-all duration-200 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] active:scale-[0.98]">
+            Book Live ERP Walkthrough
+          </a>
+          <a href="tel:+923009221193" class="border border-[#2a2a2a] text-white px-7 py-4 rounded-full text-sm font-semibold hover:bg-white/5 transition-all">
+            Call Us: +92 300 9221193
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f]" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-2.5 mb-5" aria-label="Inspired Technology - Home">
+            <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+          </a>
+          <p class="text-[#636363] text-sm leading-relaxed max-w-sm mb-6">Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/www.inspired.com.pk/" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-white" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63c-.01-.9-.74-1.63-1.63-1.63Z" /></svg>
+            </a>
+            <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-emerald-400" aria-label="WhatsApp">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.23-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29-.25-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.25-.64.79-.79.95-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.47Z" /></svg>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services &amp; Solutions</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="web-development.html" class="text-[#636363] text-sm hover:text-white transition-colors">Website Development</a></li>
+            <li><a href="erpnext.html" class="text-[#636363] text-sm hover:text-white transition-colors">ERPNext Implementation</a></li>
+            <li><a href="ai-automation.html" class="text-[#636363] text-sm hover:text-white transition-colors">AI Automation &amp; Agents</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Network Security &amp; Firewalls</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">24/7 SLA Operations</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Structured Data Cabling</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">CCTV &amp; IP Surveillance</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">About Us</a></li>
+            <li><a href="portfolio.html" class="text-[#636363] text-sm hover:text-white transition-colors">Case Studies &amp; Portfolio</a></li>
+            <li><a href="about.html#story-heading" class="text-[#636363] text-sm hover:text-white transition-colors">Leadership &amp; Story</a></li>
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">Our Best Clients</a></li>
+            <li><a href="contact.html" class="text-[#636363] text-sm hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Global Locations</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">Pakistan HQ</div>
+              <div class="text-[#818cf8] mb-0.5">+92 300 9221193</div>
+              <div class="text-[#636363]">Main Shahrah-e-Faisal, Karachi</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">United States</div>
+              <div class="text-[#818cf8] mb-0.5">+1 (973) 626-0873</div>
+              <div class="text-[#636363]">80 Addison Ave, Rockaway, NJ</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">International</div>
+              <div class="text-[#818cf8] mb-0.5">+49 1575 5769970</div>
+              <div class="text-[#636363]">European Representation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#636363]">
+        <div>&copy; 2026 Inspired Technology Pvt. Ltd. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="about.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="about.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Security Overview</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

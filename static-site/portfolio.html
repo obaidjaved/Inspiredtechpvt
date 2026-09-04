@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Inspired Technology</title>
+  <meta name="description" content="Live screenshots from Inspired Technology projects, set inside a shared device-mockup system.">
+  <link rel="icon" type="image/png" href="clients/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css">
+  <style>
+    /* Portfolio responsive overrides */
+    @media (max-width: 768px) {
+      main section[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        padding: 48px 5vw !important;
+      }
+      main section[style*="grid-template-columns"] > div[style*="order"] {
+        order: unset !important;
+      }
+      main section[style*="grid-template-columns"] > div[style*="height: 520px"] {
+        height: 340px !important;
+      }
+      main section[style*="grid-template-columns"] div[style*="width: min(72%"] {
+        width: 85% !important;
+      }
+      main section[style*="grid-template-columns"] div[style*="width: 220px"] {
+        width: 160px !important;
+      }
+      main section[style*="grid-template-columns"] div[style*="left: 6%"] {
+        left: 2% !important;
+      }
+      main section[style*="grid-template-columns"] div[style*="right: 6%"] {
+        right: 2% !important;
+      }
+      main section[style*="grid-template-columns"] h2 {
+        font-size: 22px !important;
+      }
+      main section[style*="grid-template-columns"] p[style*="max-width: 42ch"] {
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- ===== NAVBAR ===== -->
+  <header id="site-header" class="header-scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Inspired Technology - Home">
+        <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-1" role="menubar">
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Company</a>
+
+        <!-- Services Dropdown -->
+        <div id="services-dropdown" class="relative">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg flex items-center gap-1.5 text-[#9a9a9a] hover:text-white hover:bg-white/5">
+            Services
+            <svg class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200 text-[#636363]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown Menu -->
+          <div id="services-dropdown-menu" class="absolute top-full left-0 mt-2 w-80 bg-[#121212] border border-[#2a2a2a] rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl opacity-0 pointer-events-none translate-y-2 scale-95 transition-all duration-200">
+            <div class="space-y-1">
+              <a href="web-development.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">Website Development</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">NEW</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Next.js web apps, Headless e-commerce & PWAs</span>
+              </a>
+              <a href="erpnext.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">ERPNext Implementation</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">ZATCA</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">ZATCA compliance, Accounting, HRMS & Supply Chain</span>
+              </a>
+              <a href="ai-automation.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">AI Automation & Agents</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">AI</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Autonomous LLM agents, Enterprise RAG & OCR</span>
+              </a>
+              <a href="services.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">All Services & Infrastructure</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">15+ Yrs</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Cisco networking, Data cabling, CCTV & 24/7 SLAs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-white bg-white/10">Portfolio</a>
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">About</a>
+
+        <a href="contact.html" class="ml-4 btn btn-primary btn-sm">Contact Us</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl lg:hidden pt-[72px] overflow-y-auto translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col p-6 gap-2">
+      <div class="flex justify-end mb-4">
+        <button id="mobile-menu-close" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Company</a>
+
+      <!-- Mobile Services Accordion -->
+      <div>
+        <button id="mobile-services-btn" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8] w-full flex items-center justify-between">
+          <span>Services</span>
+          <svg class="mobile-arrow w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-sub" class="pl-4 space-y-3 py-2 border-l border-[#2a2a2a] my-2 max-h-0 overflow-hidden transition-all duration-300">
+          <a href="web-development.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">Website Development</a>
+          <a href="erpnext.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">ERPNext Implementation</a>
+          <a href="ai-automation.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">AI Automation & Agents</a>
+          <a href="services.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">All Services & Infrastructure</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Portfolio</a>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">About Us</a>
+
+      <div class="mt-8">
+        <a href="contact.html" class="btn btn-primary w-full">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section style="padding: 96px 8vw 64px; border-bottom: 1px solid rgba(255,255,255,0.10); background: radial-gradient(60% 50% at 15% 0%, rgba(77,124,255,0.14), transparent 60%), #0a0a0c;">
+      <p style="color: #4d7cff; font-size: 13px; letter-spacing: 0.02em; margin: 0; font-family: 'IBM Plex Mono', monospace;">// SELECTED WORK</p>
+    </section>
+    <!-- Case Study 01: Unified Custom LMS & Student Ecosystem for Tapsvs -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">01</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Unified Custom LMS & Student Ecosystem for Tapsvs</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">tapsvs.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">WordPress student portal plugin with LearnDash integration — rebuilt across several versions for stability and a cleaner course-tracking experience.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">WordPress</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">LearnDash</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Plugin dev</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/tapsvs-lms.png" alt="Unified Custom LMS & Student Ecosystem for Tapsvs website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 02: Interactive 3D Hat Patch Customizer for DIKHatz -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">02</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Interactive 3D Hat Patch Customizer for DIKHatz</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">dikhatz.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Shopify build for a Dallas patch-hat brand — landing page, mega-menu header, cart drawer upsell, and a custom patch-animation demo section.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Shopify</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Liquid</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">E‑commerce</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Dual Phone Layout -->
+              <div style="position: relative; width: 100%; height: 100%; z-index: 1;">
+                <!-- Phone A -->
+                <div style="position: absolute; left: 6%; top: 8%; z-index: 2; transform: rotate(-9deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/dikhatz-shopify.png" alt="Interactive 3D Hat Patch Customizer for DIKHatz mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+                <!-- Phone B -->
+                <div style="position: absolute; right: 6%; top: 20%; z-index: 1; transform: rotate(7deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/dikhatz-shopify.png" alt="Interactive 3D Hat Patch Customizer for DIKHatz mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 03: Smart Facilities Management & Asset CAFM Portal -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">03</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Smart Facilities Management & Asset CAFM Portal</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">khadamatfm.ae</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Facility management company serving Abu Dhabi commercial, residential, and government clients — including Abu Dhabi Police, LuLu Retail, and ICAD.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Web</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">UAE market</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/khadamatfm-ae.png" alt="Smart Facilities Management & Asset CAFM Portal website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 04: Hybrid Content & E-Commerce Platform for Drive Venturous -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">04</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Hybrid Content & E-Commerce Platform for Drive Venturous</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">driveventurous.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Custom Shopify theme for a truck-tops brand — product hero PDP, sticky mega-menu header, waitlist modal with Klaviyo, and a metafield-driven collection header.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Shopify</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Klaviyo</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Liquid</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Dual Phone Layout -->
+              <div style="position: relative; width: 100%; height: 100%; z-index: 1;">
+                <!-- Phone A -->
+                <div style="position: absolute; left: 6%; top: 8%; z-index: 2; transform: rotate(-9deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/drive-venturous.png" alt="Hybrid Content & E-Commerce Platform for Drive Venturous mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+                <!-- Phone B -->
+                <div style="position: absolute; right: 6%; top: 20%; z-index: 1; transform: rotate(7deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/drive-venturous.png" alt="Hybrid Content & E-Commerce Platform for Drive Venturous mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 05: High-Volume Online Pharmacy & Inventory Sync for Meri Pharmacy -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">05</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">High-Volume Online Pharmacy & Inventory Sync for Meri Pharmacy</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">meripharmacy.pk</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Online pharmacy platform covering healthcare products, prescription refills, and clinic listings for customers across Pakistan.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">E‑commerce</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Pakistan market</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/meri-pharmacy.png" alt="High-Volume Online Pharmacy & Inventory Sync for Meri Pharmacy website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 06: Direct-to-Consumer Luxury Cosmetics Store for Made by Throne -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">06</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Direct-to-Consumer Luxury Cosmetics Store for Made by Throne</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">madebythrone.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Peptide-first skincare and haircare brand built around a single flagship GHK-Cu serum, positioned as a higher standard of ingredient-led formulation.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Shopify</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Brand site</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/made-by-throne.png" alt="Direct-to-Consumer Luxury Cosmetics Store for Made by Throne website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 07: Enterprise Medical College & Hospital ERP for Clineum -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">07</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Enterprise Medical College & Hospital ERP for Clineum</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">clineum.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Nursing college management platform for Pakistan — admissions, fees, attendance, clinical rotations, and PNC compliance in one dashboard.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Web</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/clineum-medical.png" alt="Enterprise Medical College & Hospital ERP for Clineum website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 08: High-Performance Cloud & Digital Engineering Agency Platform -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">08</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">High-Performance Cloud & Digital Engineering Agency Platform</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">webratek.co.uk</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">UK web design agency offering bespoke web development, mobile app development, and digital marketing for brand-led businesses.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Agency</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">UK market</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/webratek-uk.png" alt="High-Performance Cloud & Digital Engineering Agency Platform website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 09: Enterprise IT Transformation & Multi-Cloud Consultancy Portal -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">09</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Enterprise IT Transformation & Multi-Cloud Consultancy Portal</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">fusion-experts.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Oracle Fusion ERP implementation partner helping businesses across Saudi Arabia roll out Oracle systems and best-practice processes.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Agency</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Web</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/fusion-experts.png" alt="Enterprise IT Transformation & Multi-Cloud Consultancy Portal website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 10: Digital Publishing, Author Workspace & Content Architecture -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">10</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Digital Publishing, Author Workspace & Content Architecture</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">pegasuswriting.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Book-writing company offering ghostwriting, editing, publishing, and cover design services for aspiring authors internationally.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Services</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Web</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/pegasus-writing.png" alt="Digital Publishing, Author Workspace & Content Architecture website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 11: Modern Streetwear & High-Velocity Fashion E-Commerce Store -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">11</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Modern Streetwear & High-Velocity Fashion E-Commerce Store</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">thread21.pk</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">Fashion e-commerce storefront for a Pakistani clothing label, with a mobile-first shopping experience and limited-edition seasonal drops.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">E‑commerce</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Pakistan market</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Dual Phone Layout -->
+              <div style="position: relative; width: 100%; height: 100%; z-index: 1;">
+                <!-- Phone A -->
+                <div style="position: absolute; left: 6%; top: 8%; z-index: 2; transform: rotate(-9deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/thread21-pk.png" alt="Modern Streetwear & High-Velocity Fashion E-Commerce Store mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+                <!-- Phone B -->
+                <div style="position: absolute; right: 6%; top: 20%; z-index: 1; transform: rotate(7deg); width: 220px; border-radius: 34px; padding: 9px; background: linear-gradient(160deg,#2b2822,#100f0c); box-shadow: 0 30px 60px -22px rgba(0,0,0,0.8); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 26px; overflow: hidden; aspect-ratio: 9/19.3; background: #0a0906; position: relative;">
+                    <img src="case-studies/thread21-pk.png" alt="Modern Streetwear & High-Velocity Fashion E-Commerce Store mobile preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                    <div style="position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #0a0906; border-radius: 100px; z-index: 2;"></div>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 12: Tiered Membership & Learning Platform for English Evolution -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">12</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Tiered Membership & Learning Platform for English Evolution</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">englishevolutionacademy.com</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">WordPress site restoration and staging cleanup — resolved SQL import and redirect issues to get the academy's learning site fully live again.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">WordPress</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Education</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/english-evolution.png" alt="Tiered Membership & Learning Platform for English Evolution website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 13: AI Drone Multispectral Analytics & Precision AgriTech Platform -->
+    <section style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 1;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">13</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">AI Drone Multispectral Analytics & Precision AgriTech Platform</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">agrilift.ai</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">AI-driven agricultural data platform helping farmers and agribusiness partners predict outcomes and navigate planning decisions.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">AgTech</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Web</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 2;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/agrilift-ai.png" alt="AI Drone Multispectral Analytics & Precision AgriTech Platform website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <!-- Case Study 14: Luxury Pret & Bridal Fashion E-Commerce Flagship -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; padding: 88px 8vw; border-bottom: 1px solid rgba(255,255,255,0.10); background: #0a0a0c;">
+      <!-- Copy -->
+      <div style="order: 2;">
+        <p style="color: #4d7cff; font-size: 13px; margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace;">14</p>
+        <h2 style="font-size: clamp(24px,2.4vw,34px); font-weight: 600; margin: 0 0 12px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; color: #f5f6f8;">Luxury Pret & Bridal Fashion E-Commerce Flagship</h2>
+        <p style="color: #9aa0a9; font-size: 13.5px; margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace;">ufussascloset.com.pk</p>
+        <p style="color: #9aa0a9; font-size: 15px; line-height: 1.7; max-width: 42ch; margin: 0 0 24px;">WooCommerce storefront for a Pakistani fashion retailer — debugged session and email-validation errors to get checkout running reliably.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">WooCommerce</span>
+          <span style="font-size: 11.5px; letter-spacing: 0.02em; color: #9aa0a9; border: 1px solid rgba(255,255,255,0.10); padding: 6px 12px; border-radius: 100px;">Pakistan market</span>
+        </div>
+      </div>
+
+      <!-- Device Stage -->
+      <div style="position: relative; height: 520px; display: flex; align-items: center; justify-content: center; order: 1;">
+        <!-- Ambient glow -->
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,124,255,0.20), transparent 72%); filter: blur(6px); opacity: 0.9;"></div>
+              <!-- Laptop Layout -->
+              <div style="position: relative; width: min(72%,480px); z-index: 1;">
+                <!-- Lid -->
+                <div style="background: linear-gradient(180deg,#2b2822,#17150f); border-radius: 14px; padding: 12px 12px 0; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.75); border: 1px solid #2a2a2a;">
+                  <div style="border-radius: 4px; overflow: hidden; aspect-ratio: 16/10.4; background: #0a0906;">
+                    <img src="case-studies/ufussas-closet.png" alt="Luxury Pret & Bridal Fashion E-Commerce Flagship website preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                  </div>
+                </div>
+                <!-- Hinge -->
+                <div style="height: 12px; background: linear-gradient(180deg,#2b2822,#100f0c); border-radius: 0 0 6px 6px;"></div>
+                <!-- Base -->
+                <div style="height: 14px; margin: 0 -18px; background: linear-gradient(180deg,#d9d3c6,#a49d8c); border-radius: 0 0 10px 10px; position: relative; clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%); border: 1px solid #2a2a2a; border-top: none;">
+                  <div style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 64px; height: 5px; background: #8d8674; border-radius: 0 0 4px 4px;"></div>
+                </div>
+              </div>
+      </div>
+    </section>
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f]" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
+        <!-- Column 1: Brand Info -->
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-2.5 mb-5" aria-label="Inspired Technology - Home">
+            <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+          </a>
+          <p class="text-[#636363] text-sm leading-relaxed max-w-sm mb-6">
+            Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/www.inspired.com.pk/" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-white" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63c-.01-.9-.74-1.63-1.63-1.63Z"/></svg>
+            </a>
+            <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-emerald-400" aria-label="WhatsApp">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.23-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29-.25-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.25-.64.79-.79.95-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.47Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Solutions -->
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services &amp; Solutions</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="web-development.html" class="text-[#636363] text-sm hover:text-white transition-colors">Website Development</a></li>
+            <li><a href="erpnext.html" class="text-[#636363] text-sm hover:text-white transition-colors">ERPNext Implementation</a></li>
+            <li><a href="ai-automation.html" class="text-[#636363] text-sm hover:text-white transition-colors">AI Automation & Agents</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Network Security & Firewalls</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">24/7 SLA Operations</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Structured Data Cabling</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">CCTV & IP Surveillance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">About Us</a></li>
+            <li><a href="portfolio.html" class="text-[#636363] text-sm hover:text-white transition-colors">Case Studies & Portfolio</a></li>
+            <li><a href="about.html#story-heading" class="text-[#636363] text-sm hover:text-white transition-colors">Leadership & Story</a></li>
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">Our Best Clients</a></li>
+            <li><a href="contact.html" class="text-[#636363] text-sm hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Global Hubs -->
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Global Locations</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">Pakistan HQ</div>
+              <div class="text-[#818cf8] mb-0.5">+92 300 9221193</div>
+              <div class="text-[#636363]">Main Shahrah-e-Faisal, Karachi</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">United States</div>
+              <div class="text-[#818cf8] mb-0.5">+1 (973) 626-0873</div>
+              <div class="text-[#636363]">80 Addison Ave, Rockaway, NJ</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">International</div>
+              <div class="text-[#818cf8] mb-0.5">+49 1575 5769970</div>
+              <div class="text-[#636363]">European Representation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#636363]">
+        <div>&copy; 2026 Inspired Technology Pvt. Ltd. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="about.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="about.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Security Overview</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

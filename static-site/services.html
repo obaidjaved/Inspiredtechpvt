@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Inspired Technology</title>
+  <meta name="description" content="Explore Inspired Technology's comprehensive technology solutions — web development, ERPNext implementation, AI automation, network security, and managed IT services.">
+  <link rel="icon" type="image/png" href="clients/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="site-header" class="header-scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Inspired Technology - Home">
+        <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-1" role="menubar">
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Company</a>
+
+        <!-- Services Dropdown -->
+        <div id="services-dropdown" class="relative">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg flex items-center gap-1.5 text-white bg-white/10">
+            Services
+            <svg class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown Menu -->
+          <div id="services-dropdown-menu" class="absolute top-full left-0 mt-2 w-80 bg-[#121212] border border-[#2a2a2a] rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl opacity-0 pointer-events-none translate-y-2 scale-95 transition-all duration-200">
+            <div class="space-y-1">
+              <a href="web-development.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">Website Development</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">NEW</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Next.js web apps, Headless e-commerce & PWAs</span>
+              </a>
+              <a href="erpnext.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">ERPNext Implementation</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">ZATCA</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">ZATCA compliance, Accounting, HRMS & Supply Chain</span>
+              </a>
+              <a href="ai-automation.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">AI Automation & Agents</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">AI</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Autonomous LLM agents, Enterprise RAG & OCR</span>
+              </a>
+              <a href="services.html" class="p-3 rounded-xl hover:bg-white/5 transition-colors flex flex-col group block">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="text-sm font-semibold text-white group-hover:text-[#818cf8] transition-colors">All Services & Infrastructure</span>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#6366f1]/20 text-[#d0d1fb]">15+ Yrs</span>
+                </div>
+                <span class="text-xs text-[#636363] leading-tight">Cisco networking, Data cabling, CCTV & 24/7 SLAs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">Portfolio</a>
+        <a href="about.html" role="menuitem" class="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg text-[#9a9a9a] hover:text-white hover:bg-white/5">About</a>
+
+        <a href="contact.html" class="ml-4 btn btn-primary btn-sm">Contact Us</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl lg:hidden pt-[72px] overflow-y-auto translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col p-6 gap-2">
+      <div class="flex justify-end mb-4">
+        <button id="mobile-menu-close" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Company</a>
+
+      <!-- Mobile Services Accordion -->
+      <div>
+        <button id="mobile-services-btn" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8] w-full flex items-center justify-between">
+          <span>Services</span>
+          <svg class="mobile-arrow w-5 h-5 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-sub" class="pl-4 space-y-3 py-2 border-l border-[#2a2a2a] my-2 max-h-96 overflow-hidden transition-all duration-300">
+          <a href="web-development.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">Website Development</a>
+          <a href="erpnext.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">ERPNext Implementation</a>
+          <a href="ai-automation.html" class="block text-sm text-[#9a9a9a] hover:text-white py-1">AI Automation & Agents</a>
+          <a href="services.html" class="block text-sm text-white py-1">All Services & Infrastructure</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">Portfolio</a>
+      <a href="about.html" class="text-xl font-semibold py-3 text-white hover:text-[#818cf8]">About Us</a>
+
+      <div class="mt-8">
+        <a href="contact.html" class="btn btn-primary w-full">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- Hero (Dark) -->
+    <section class="pt-32 pb-24 bg-[#0a0a0a] relative overflow-hidden" aria-labelledby="services-hero-heading">
+      <div class="absolute inset-0 opacity-15" aria-hidden="true">
+        <div class="absolute inset-0" style="background-image: radial-gradient(rgba(99,102,241,0.2) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap items-center gap-2 mb-6">
+          <a href="index.html" class="text-[#636363] hover:text-white text-xs transition-colors">Home</a>
+          <span class="text-[#454545] text-xs">/</span>
+          <span class="text-[#818cf8] text-xs font-semibold">Services</span>
+        </div>
+
+        <div class="max-w-3xl">
+          <span class="badge badge-primary badge-lg mb-6 uppercase tracking-wider">
+            Comprehensive Technology Solutions
+          </span>
+          <h1 id="services-hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#e8e8e8] leading-[1.08] tracking-tight">
+            Engineering Digital Products &amp; <span class="gradient-text">Enterprise Infrastructure</span>
+          </h1>
+          <p class="text-[#9a9a9a] text-base md:text-lg leading-relaxed mb-8">
+            From cutting-edge digital transformation — custom web applications, ZATCA-compliant ERPNext, and agentic AI automation — to mission-critical Cisco enterprise networking and 24/7 SLA operations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Digital Transformation Services (Light Section) -->
+    <section class="section-light py-24 relative z-10" aria-labelledby="featured-services-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="badge badge-primary mb-4">Digital Transformation</span>
+          <h2 id="featured-services-heading" class="text-3xl md:text-4xl font-bold mt-3 text-[#0d0d0d]">
+            Our Core Digital Capabilities
+          </h2>
+          <p class="text-[#6b7280] text-base mt-3 max-w-2xl mx-auto">
+            Explore our dedicated digital engineering practices designed to build scalable, high-conversion software platforms.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Service 1: Web Development -->
+          <div class="client-logo-card flex-col items-start text-left p-0 rounded-2xl bg-white border border-[#e5e7eb] overflow-hidden hover:border-[#6366f1]/50 group">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&auto=format" alt="Website & Web App Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20">Digital Engineering</span>
+              <span class="absolute top-4 right-4 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full text-white" style="background: #6366f1;">Flagship Service</span>
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between text-white">
+                <div>
+                  <div class="text-xl font-bold">&lt;1.0s</div>
+                  <div class="text-[10px] text-white/70">Load Time</div>
+                </div>
+                <div>
+                  <div class="text-xl font-bold">99.9%</div>
+                  <div class="text-[10px] text-white/70">Uptime</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 flex-1 flex flex-col justify-between w-full">
+              <div>
+                <h3 class="text-xl font-bold text-[#0d0d0d] mb-3 group-hover:text-[#6366f1] transition-colors">Website &amp; Web App Development</h3>
+                <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Scalable Next.js, React, and full-stack web applications, headless e-commerce stores, and high-conversion progressive web apps.</p>
+
+                <div class="flex flex-wrap gap-1.5 mb-8">
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Next.js 15</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">React 19</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">TypeScript</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Tailwind CSS</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Shopify Plus</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">GraphQL</span>
+                </div>
+              </div>
+
+              <a href="web-development.html" class="w-full py-3 px-4 rounded-xl text-center text-sm font-semibold text-white transition-all flex items-center justify-center gap-2" style="background: #6366f1;">
+                Explore Detailed Page &amp; Solutions
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: ERPNext -->
+          <div class="client-logo-card flex-col items-start text-left p-0 rounded-2xl bg-white border border-[#e5e7eb] overflow-hidden hover:border-[#6366f1]/50 group">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format" alt="ERPNext Implementation & Customization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20">Enterprise Platforms</span>
+              <span class="absolute top-4 right-4 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full text-white" style="background: #10b981;">ZATCA Certified</span>
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between text-white">
+                <div>
+                  <div class="text-xl font-bold">$0</div>
+                  <div class="text-[10px] text-white/70">License Fee</div>
+                </div>
+                <div>
+                  <div class="text-xl font-bold">40%</div>
+                  <div class="text-[10px] text-white/70">OpEx Saved</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 flex-1 flex flex-col justify-between w-full">
+              <div>
+                <h3 class="text-xl font-bold text-[#0d0d0d] mb-3 group-hover:text-[#6366f1] transition-colors">ERPNext Implementation &amp; Customization</h3>
+                <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Complete open-source ERP implementation covering Financials, ZATCA e-Invoicing compliance, HRMS &amp; Payroll, Inventory, and Manufacturing.</p>
+
+                <div class="flex flex-wrap gap-1.5 mb-8">
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Frappe Framework</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">ZATCA Phase 1 &amp; 2</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Financials</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Supply Chain</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">HRMS</span>
+                </div>
+              </div>
+
+              <a href="erpnext.html" class="w-full py-3 px-4 rounded-xl text-center text-sm font-semibold text-white transition-all flex items-center justify-center gap-2" style="background: #10b981;">
+                Explore Detailed Page &amp; Solutions
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: AI Automation -->
+          <div class="client-logo-card flex-col items-start text-left p-0 rounded-2xl bg-white border border-[#e5e7eb] overflow-hidden hover:border-[#6366f1]/50 group">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&auto=format" alt="AI Automation & Autonomous Agents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20">Artificial Intelligence</span>
+              <span class="absolute top-4 right-4 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full text-white" style="background: #818cf8;">High Impact</span>
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between text-white">
+                <div>
+                  <div class="text-xl font-bold">60%</div>
+                  <div class="text-[10px] text-white/70">Workload Deflected</div>
+                </div>
+                <div>
+                  <div class="text-xl font-bold">99.2%</div>
+                  <div class="text-[10px] text-white/70">Accuracy</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 flex-1 flex flex-col justify-between w-full">
+              <div>
+                <h3 class="text-xl font-bold text-[#0d0d0d] mb-3 group-hover:text-[#6366f1] transition-colors">AI Automation &amp; Autonomous Agents</h3>
+                <p class="text-[#6b7280] text-sm leading-relaxed mb-6">Custom LLM agent workflows, private enterprise RAG knowledge bases, intelligent document OCR extraction, and multilingual conversational AI.</p>
+
+                <div class="flex flex-wrap gap-1.5 mb-8">
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">LangGraph</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Enterprise RAG</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">OCR / Vision</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">WhatsApp AI</span>
+                  <span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#f3f4f6] text-[#374151]">Llama 3 / GPT-4o</span>
+                </div>
+              </div>
+
+              <a href="ai-automation.html" class="w-full py-3 px-4 rounded-xl text-center text-sm font-semibold text-white transition-all flex items-center justify-center gap-2" style="background: #818cf8;">
+                Explore Detailed Page &amp; Solutions
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enterprise Infrastructure & Networking (Light Gray Section) -->
+    <section class="section-light-gray py-24 relative z-10" aria-labelledby="infrastructure-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="badge badge-primary mb-4">Infrastructure &amp; Security</span>
+          <h2 id="infrastructure-heading" class="text-3xl md:text-4xl font-bold mt-3 text-[#0d0d0d]">
+            Enterprise Networking &amp; Managed IT Solutions
+          </h2>
+          <p class="text-[#6b7280] text-base mt-3 max-w-2xl mx-auto">
+            Trusted by leading Pakistani and international corporations for 15+ years. Cisco-certified engineers and 24/7 on-site resident support.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Infra 01 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">01</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Network Security &amp; Firewall Architecture</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Cisco and multi-vendor installations of any scale. We deploy next-gen firewalls, zero-trust VPNs, and intrusion prevention systems to secure corporate data.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Next-Gen Firewall Deployment
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  24/7 Security Operations Monitoring
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Vulnerability Assessment &amp; Penetration Testing
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Regulatory Compliance Auditing
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Cisco Certified</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Zero Trust</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Palo Alto</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Fortinet</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">SIEM &amp; SOC</span>
+            </div>
+          </div>
+
+          <!-- Infra 02 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">02</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">24/7 Service Level Agreements (SLAs)</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Guaranteed uptime with on-site resident engineers, automated network monitoring, rapid incident response, and proactive hardware maintenance.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Guaranteed 15-minute response SLA
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Dedicated resident network engineers
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Proactive bandwidth &amp; packet loss alerting
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Quarterly executive infrastructure reports
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">24/7/365 On-Call</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Resident Engineers</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Remote Telemetry</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">99.99% Uptime</span>
+            </div>
+          </div>
+
+          <!-- Infra 03 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">03</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Comms Room &amp; Data Center Engineering</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Structured cabling, fiber optic backbones, precision cooling, CCTV integration, access control, and complete server room infrastructure deployment.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Clean rack cable management
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Environmental temperature &amp; humidity sensors
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Biometric door access &amp; IP surveillance
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Automated backup power (UPS &amp; Generator)
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Server Racks</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Fiber Backbone</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Access Control</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Precision Cooling</span>
+            </div>
+          </div>
+
+          <!-- Infra 04 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">04</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Data Cabling &amp; Structured Cabling</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Professional multi-pair trunk cabling, Cat6/Cat6A/Cat7 copper installations, and cross-building connections certified to international standards.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Comprehensive site surveys &amp; layout blueprints
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Fluke network certification testing
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Numbered &amp; color-coded patch panels
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  25-year manufacturer system warranty
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Cat6A / Cat7</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Multi-Floor Trunking</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Fluke Certified</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Patch Panels</span>
+            </div>
+          </div>
+
+          <!-- Infra 05 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">05</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">IT Infrastructure &amp; Network Audits</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Detailed vulnerability analysis, hardware lifecycle auditing, and software license compliance to eliminate risks and optimize IT expenditure.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  End-to-end hardware &amp; software asset inventory
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Network topology mapping &amp; bottleneck detection
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Disaster recovery &amp; backup validation
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Prioritized remediation roadmap
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Risk Assessment</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">License Compliance</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Bandwidth Profiling</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Disaster Recovery</span>
+            </div>
+          </div>
+
+          <!-- Infra 06 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">06</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Fiber Optic Design &amp; Splicing</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Single-mode and multi-mode fiber optic cabling systems with fusion splicing, OTDR testing, and ultra-high-speed campus interconnections.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Precision core-alignment fusion splicing
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  OTDR loss &amp; reflection certification
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Armored underground &amp; aerial cable runs
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Emergency fiber break repair SLA
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Single-mode</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Multi-mode</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Fusion Splicing</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">OTDR Certified</span>
+            </div>
+          </div>
+
+          <!-- Infra 07 -->
+          <div class="bg-white border border-[#e5e7eb] rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-[#6366f1]/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-[#6366f1] opacity-30">07</span>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#f3f4f6] text-[#4b5563]">Enterprise</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d0d0d] mb-2">Enterprise CCTV &amp; IP Surveillance</h3>
+              <p class="text-[#6b7280] text-xs leading-relaxed mb-6">Commercial 4K IP camera network design, NVR storage arrays, video analytics, AI motion tracking, and centralized remote monitoring.</p>
+              <div class="space-y-2 pt-4 border-t border-[#f3f4f6] mb-6">
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Day/Night infrared &amp; starlight sensors
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  License plate &amp; facial recognition analytics
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Redundant RAID storage servers
+                </div>
+                <div class="flex items-center gap-2 text-xs text-[#374151]">
+                  <svg class="w-3.5 h-3.5 text-[#6366f1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Encrypted cloud &amp; remote smartphone feeds
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 pt-4 border-t border-[#f3f4f6]">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">4K IP Cameras</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">NVR RAID Storage</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">AI Video Analytics</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#f8f9fa] border border-[#e5e7eb] text-[#6b7280]">Mobile App Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Consultation CTA (Dark Section) -->
+    <section class="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative overflow-hidden text-center">
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <span class="text-[#818cf8] text-xs font-bold tracking-widest uppercase mb-4 block">// LET'S COLLABORATE</span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
+          Need a Tailored IT or Software Solution?
+        </h2>
+        <p class="text-[#9a9a9a] text-base max-w-xl mx-auto mb-10 leading-relaxed">
+          Our principal technical architects are available to review your existing architecture, calculate cost savings, and map out your digital roadmap.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            Contact Our Solutions Team
+          </a>
+          <a href="tel:+923009221193" class="btn btn-outline btn-lg">
+            Call +92 300 9221193
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f]" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
+        <!-- Column 1: Brand Info -->
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-2.5 mb-5" aria-label="Inspired Technology - Home">
+            <img src="clients/logo.png" alt="Inspired Technology" class="h-9 w-auto object-contain" style="filter: brightness(0) invert(1)">
+          </a>
+          <p class="text-[#636363] text-sm leading-relaxed max-w-sm mb-6">Pakistan's most trusted IT solutions provider and global digital engineering partner — delivering excellence in networking, security, ERPNext, and AI automation since 2016.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/www.inspired.com.pk/" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-white" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63c-.01-.9-.74-1.63-1.63-1.63Z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/4915755769970" target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm text-[#9a9a9a] hover:text-emerald-400" aria-label="WhatsApp">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.23-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29-.25-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.25-.64.79-.79.95-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.47Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Solutions -->
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services &amp; Solutions</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="web-development.html" class="text-[#636363] text-sm hover:text-white transition-colors">Website Development</a></li>
+            <li><a href="erpnext.html" class="text-[#636363] text-sm hover:text-white transition-colors">ERPNext Implementation</a></li>
+            <li><a href="ai-automation.html" class="text-[#636363] text-sm hover:text-white transition-colors">AI Automation &amp; Agents</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Network Security &amp; Firewalls</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">24/7 SLA Operations</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">Structured Data Cabling</a></li>
+            <li><a href="services.html" class="text-[#636363] text-sm hover:text-white transition-colors">CCTV &amp; IP Surveillance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">About Us</a></li>
+            <li><a href="portfolio.html" class="text-[#636363] text-sm hover:text-white transition-colors">Case Studies &amp; Portfolio</a></li>
+            <li><a href="about.html#story-heading" class="text-[#636363] text-sm hover:text-white transition-colors">Leadership &amp; Story</a></li>
+            <li><a href="about.html" class="text-[#636363] text-sm hover:text-white transition-colors">Our Best Clients</a></li>
+            <li><a href="contact.html" class="text-[#636363] text-sm hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Global Hubs -->
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Global Locations</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">Pakistan HQ</div>
+              <div class="text-[#818cf8] mb-0.5">+92 300 9221193</div>
+              <div class="text-[#636363]">Main Shahrah-e-Faisal, Karachi</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">United States</div>
+              <div class="text-[#818cf8] mb-0.5">+1 (973) 626-0873</div>
+              <div class="text-[#636363]">80 Addison Ave, Rockaway, NJ</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#121212] border border-[#1f1f1f]">
+              <div class="font-bold text-[#e8e8e8] mb-0.5">International</div>
+              <div class="text-[#818cf8] mb-0.5">+49 1575 5769970</div>
+              <div class="text-[#636363]">European Representation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#636363]">
+        <div>&copy; 2026 Inspired Technology Pvt. Ltd. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="about.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="about.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Security Overview</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
