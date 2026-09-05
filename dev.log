@@ -1,0 +1,61 @@
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Mahad\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Mahad\Downloads\inspiredWeb-main\package-lock.json
+
+   ▲ Next.js 15.5.24
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.2.10:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 36.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.7s (1396 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 4.8s (1401 modules)
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\webpack-runtime.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\require.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\load-components.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\utils.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\swc\options.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\swc\index.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\analysis\parse-module.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\analysis\get-page-static-info.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js:227:47)
+    at Object.<anonymous> (C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js:230:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\webpack-runtime.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\require.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\load-components.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\utils.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\swc\options.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\swc\index.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\analysis\parse-module.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\build\analysis\get-page-static-info.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Mahad\Downloads\inspiredWeb-main\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js:227:47)
+    at Object.<anonymous> (C:\Users\Mahad\Downloads\inspiredWeb-main\.next\server\app\_not-found\page.js:230:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 5.1s (1748 modules)
+ GET / 500 in 36954ms
+
+C:\Users\Mahad\Downloads\inspiredWeb-main>
